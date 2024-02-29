@@ -16,6 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         scrollBehavior: MyCustomScrollBehavior(),
+        theme: ThemeData(
+          fontFamily: 'Poppins',
+          // Define other theme properties if needed
+        ),
         debugShowCheckedModeBanner: false,
         routes: {
           // '/contact': (context) => ContactPage(),

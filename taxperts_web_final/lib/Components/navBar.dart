@@ -14,15 +14,16 @@ class CustomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     // Define your colors, font sizes, and other styles.
     double screenWidth = MediaQuery.of(context).size.width;
-    double p30 = screenWidth / 56;
-    double p60 = screenWidth / 28;
-    double p15 = screenWidth / 112;
+    double p30 = screenWidth / 60;
+    double p60 = screenWidth / 30;
+    double p15 = screenWidth / 120;
+    double p20 = screenWidth / 90;
 
     Color activeColor = Colors.blue;
     Color inactiveColor = Colors.black;
     Color startNowColor = Colors.orange; // Color for "Start Now" text when inactive.
-    double fontSize = 18;
-    FontWeight fontWeight = FontWeight.bold;
+    double fontSize = 16;
+    FontWeight fontWeight = FontWeight.w500;
 
     // Define labels and routes.
     List<String> labels = ['Home', 'Tax Calculator', 'Services', 'Resources', 'Blog', 'Contact'];
@@ -52,8 +53,8 @@ class CustomNavigationBar extends StatelessWidget {
       if (i < labels.length - 1) {
         navItems.add(
           Container(
-            height: 20, // Set the vertical divider height to 20
-            child: VerticalDivider(color: inactiveColor, thickness: 1,width: p30,),
+            height: 15, // Set the vertical divider height to 20
+            child: VerticalDivider(color: inactiveColor, thickness: 1,width: p20,),
           ),
         );
       }
