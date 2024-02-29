@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'ContactPage/contact.dart';
 import 'HomePage/home.dart';
 
 void main() {
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         routes: {
-          // '/contact': (context) => ContactPage(),
+          '/home': (context) => HomePage(),
+          '/contact': (context) => ContactPage(),
           // '/home': (context) => HomePage(),
           // '/blog': (context) => BlogPage(),
           // '/start': (context) => FormPage(),
