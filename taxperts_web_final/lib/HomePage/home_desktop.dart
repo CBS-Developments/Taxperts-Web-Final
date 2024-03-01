@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxperts_web_final/colors.dart';
 import 'package:taxperts_web_final/sizes.dart';
 
 import '../Components/navBar.dart';
@@ -22,6 +23,11 @@ class _HomeDesktopState extends State<HomeDesktop> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double p30 = screenWidth / 60;
+    double p60 = screenWidth / 30;
+    double p15 = screenWidth / 120;
+    double p20 = screenWidth / 90;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -32,7 +38,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 color: Colors.white, // Background color
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1), // Shadow color with some transparency
+                    color: Colors.black.withOpacity(
+                        0.1), // Shadow color with some transparency
                     spreadRadius: 0, // Spread radius
                     blurRadius: 4, // Blur radius
                     offset: Offset(0, 2), // changes position of shadow
@@ -40,10 +47,13 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ],
                 // If you also want to round the corners of the container
               ),
-              height: 100, // Set the container height to match the AppBar height
+              height:
+                  100, // Set the container height to match the AppBar height
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center, // Center the Row vertically
-                mainAxisAlignment: MainAxisAlignment.spaceBetween, // Space items horizontally
+                crossAxisAlignment:
+                    CrossAxisAlignment.center, // Center the Row vertically
+                mainAxisAlignment:
+                    MainAxisAlignment.spaceBetween, // Space items horizontally
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(left: 50.0),
@@ -53,12 +63,12 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     selectedIndex: _selectedIndex,
                     onItemSelected: _navigateTo,
                   ),
-
-
                 ],
               ),
             ),
-
+            SizedBox(
+              height: 1,
+            ),
             SizedBox(
               height: 650,
               width: double.infinity,
@@ -66,51 +76,366 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 children: <Widget>[
                   Positioned.fill(
                     child: Image.asset(
-                        'images/HomeBack650.png', // Replace with your background image
-                        fit: BoxFit.cover,
-                      ),
+                      'images/HomeBack650.png', // Replace with your background image
+                      fit: BoxFit.cover,
                     ),
+                  ),
                   // Centered Column for text and button overlay
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'STAY CONNECT WITH TAXPERTS',
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'STAY CONNECT WITH',
+                              style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Text(
+                              ' TAXPERTS',
+                              style: TextStyle(
+                                fontSize: 30,
+                                color: AppColor.appTeal,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      SizedBox(height: 8), // Space between the texts
-                      Text(
-                        'DO YOUR TAXES RIGHT',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                          fontWeight: FontWeight.normal,
+                        Text(
+                          'DO YOUR TAXES RIGHT',
+                          style: TextStyle(
+                            fontSize: 60,
+                            color: AppColor.appTeal,
+                            fontWeight: FontWeight.w800,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 32), // Space between text and button
-                      ElevatedButton(
-                        onPressed: () {
-                          // Handle button tap
-                        },
-                        child: Text('Meet Tax Expert'),
-                        style: ElevatedButton.styleFrom(
-                          primary: Theme.of(context).colorScheme.secondary, // Button color
-                          onPrimary: Colors.white, // Text color
-                          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+
+                        Text(
+                          '''Experience Sri Lanka's First Online Taxation Service. Simplifying Taxes with a Click.''',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors
+                                .black, // Make sure AppColor class is defined or imported
+                          ),
                         ),
-                      ),
-                    ],
+
+                        Text(
+                          'Get in Touch for Innovative, Personalized Tax Solutions.',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(height: 80), // Space between text and button
+                        Row(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {
+                                // Handle button tap
+                              },
+                              child: Text(
+                                'Meet Tax Expert',
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 36, vertical: 18),
+                                // fixedSize: const Size(
+                                //     220, 45), // Set the width and height
+                                primary: AppColor
+                                    .appOrange, // Set the background color to green
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      30), // Set the border radius
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20.0),
+                              child: TextButton(
+                                onPressed: () {},
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Estimate Your Tax ',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          color: AppColor.appTeal),
+                                    ),
+                                    Icon(
+                                      Icons.keyboard_double_arrow_right_rounded,
+                                      color:
+                                          AppColor.appTeal, // Icon color green
+                                      size: 22,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+
+                        SizedBox(height: 30),
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'TIN Registration ',
+                                  style: TextStyle(
+                                      fontSize: 18, color: AppColor.appTeal),
+                                ),
+                                Icon(
+                                  Icons.keyboard_double_arrow_right_rounded,
+                                  color: AppColor.appTeal, // Icon color green
+                                  size: 22,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
+              child: Text(
+                'TAXPERT ALWAYS BEHIND YOU TO MEET YOUR COMPLIANCE OBLIGATIONS',
+                style: TextStyle(
+                    fontSize: 28,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/IIT.png', height: 196),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child:
+                          Image.asset('images/CorporateITax.png', height: 196),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/PartnershipITax.png',
+                          height: 196),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/VAT.png', height: 196),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/SSCL.png', height: 196),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30, horizontal: 15),
+              height: 500,
+              width: 1000,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey
+                        .withOpacity(0.5), // Shadow color with opacity
+                    spreadRadius: 1, // Spread radius
+                    blurRadius: 3, // Blur radius
+                    offset: Offset(0, 1), // changes position of shadow
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
+              child: Text(
+                'AWARD WINNING TAXATION-AS-A-SERVICE COMPANY IN SRI LANKA',
+                style: TextStyle(
+                    fontSize: 28,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 180.0 ,right: 60),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Digital Social Impact Award',
+                          style: TextStyle(fontWeight: FontWeight.w600,color: AppColor.appTeal,fontSize: 24),
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'The Information Communication Agency in Sri Lanka (ICTA) was awarded the digital social impact ward in 2019 for digitalizing the tax compliance system first time in Sri Lanka.',
+                          style: TextStyle(color:Colors.black,fontSize: 18),
+                        ),
+                      ),
+                  ],
+                ),
+                    )),
+
+                Expanded(
+                    flex: 2,
+                    child: Container(
+                      height: 400,
+                      child: Center(
+                        child: Container(
+                          width: 250,
+                          height: 250,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                ),
+
+
+              ],
+            ),
+
+            Row(
+              children: [
+
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    height: 400,
+                    child: Center(
+                      child: Container(
+                        width: 250,
+                        height: 250,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
+                ),
+
+                Expanded(
+                    flex: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 180.0 ,left: 60),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'NBQS Award',
+                              style: TextStyle(fontWeight: FontWeight.w600,color: AppColor.appTeal,fontSize: 24),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'Chartered Institute for ICT, Colombo Chapter awarded the National Best Quality Software Award in 2019 for introducing the Taxation System for citizens and businesses to comply easily with their tax compliance obligations.',
+                              style: TextStyle(color:Colors.black,fontSize: 18),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
 
 
 
+
+              ],
+            ),
+
+            Row(
+              children: [
+                Expanded(
+                    flex: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 180.0 ,right: 60),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'National Ingenuity Award',
+                              style: TextStyle(fontWeight: FontWeight.w600,color: AppColor.appTeal,fontSize: 24),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'The Sri Lanka Association of Software and Services Companies (SLASSCOM) awarded the National Ingenuity Award for the best innovation in business process management at the award ceremony held on 30th March 2021 in Shangri-La, Colombo.  ',
+                              style: TextStyle(color:Colors.black,fontSize: 18),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
+
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    height: 400,
+                    child: Center(
+                      child: Container(
+                        width: 250,
+                        height: 250,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
+                ),
+
+
+
+
+              ],
+            ),
           ],
         ),
       ),

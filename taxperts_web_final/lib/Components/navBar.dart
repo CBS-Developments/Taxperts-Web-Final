@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxperts_web_final/colors.dart';
 
 class CustomNavigationBar extends StatelessWidget {
   final int selectedIndex;
@@ -19,9 +20,9 @@ class CustomNavigationBar extends StatelessWidget {
     double p15 = screenWidth / 120;
     double p20 = screenWidth / 90;
 
-    Color activeColor = Colors.blue;
+    Color activeColor = AppColor.appTeal;
     Color inactiveColor = Colors.black;
-    Color startNowColor = Colors.orange; // Color for "Start Now" text when inactive.
+    Color startNowColor = AppColor.appOrange; // Color for "Start Now" text when inactive.
     double fontSize = 16;
     FontWeight fontWeight = FontWeight.w500;
 
@@ -54,7 +55,7 @@ class CustomNavigationBar extends StatelessWidget {
         navItems.add(
           Container(
             height: 15, // Set the vertical divider height to 20
-            child: VerticalDivider(color: inactiveColor, thickness: 1,width: p20,),
+            child: VerticalDivider(color: AppColor.appDarkGrey, thickness: 1,width: p20,),
           ),
         );
       }
