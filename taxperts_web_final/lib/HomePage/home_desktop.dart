@@ -3,6 +3,7 @@ import 'package:taxperts_web_final/colors.dart';
 import 'package:taxperts_web_final/sizes.dart';
 
 import '../Components/navBar.dart';
+import '../Components/service_page_card.dart';
 
 class HomeDesktop extends StatefulWidget {
   const HomeDesktop({super.key});
@@ -29,6 +30,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
     double p15 = screenWidth / 120;
     double p20 = screenWidth / 90;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -187,23 +189,29 @@ class _HomeDesktopState extends State<HomeDesktop> {
 
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                          child: TextButton(
-                            onPressed: () {},
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'TIN Registration ',
-                                  style: TextStyle(
-                                      fontSize: 18, color: AppColor.appTeal),
+                          child: Row(
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'TIN Registration ',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          color: AppColor.appTeal),
+                                    ),
+                                    Icon(
+                                      Icons.keyboard_double_arrow_right_rounded,
+                                      color:
+                                          AppColor.appTeal, // Icon color green
+                                      size: 22,
+                                    ),
+                                  ],
                                 ),
-                                Icon(
-                                  Icons.keyboard_double_arrow_right_rounded,
-                                  color: AppColor.appTeal, // Icon color green
-                                  size: 22,
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -297,52 +305,33 @@ class _HomeDesktopState extends State<HomeDesktop> {
             Row(
               children: [
                 Expanded(
-                  flex: 3,
+                    flex: 3,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 180.0 ,right: 60),
+                      padding: const EdgeInsets.only(left: 180.0, right: 60),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Digital Social Impact Award',
-                          style: TextStyle(fontWeight: FontWeight.w600,color: AppColor.appTeal,fontSize: 24),
-                        ),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'Digital Social Impact Award',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColor.appTeal,
+                                  fontSize: 24),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'The Information Communication Agency in Sri Lanka (ICTA) was awarded the digital social impact ward in 2019 for digitalizing the tax compliance system first time in Sri Lanka.',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 18),
+                            ),
+                          ),
+                        ],
                       ),
-
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'The Information Communication Agency in Sri Lanka (ICTA) was awarded the digital social impact ward in 2019 for digitalizing the tax compliance system first time in Sri Lanka.',
-                          style: TextStyle(color:Colors.black,fontSize: 18),
-                        ),
-                      ),
-                  ],
-                ),
                     )),
-
-                Expanded(
-                    flex: 2,
-                    child: Container(
-                      height: 400,
-                      child: Center(
-                        child: Container(
-                          width: 250,
-                          height: 250,
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ),
-                ),
-
-
-              ],
-            ),
-
-            Row(
-              children: [
-
                 Expanded(
                   flex: 2,
                   child: Container(
@@ -356,11 +345,27 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     ),
                   ),
                 ),
-
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    height: 400,
+                    child: Center(
+                      child: Container(
+                        width: 250,
+                        height: 250,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
+                ),
                 Expanded(
                     flex: 3,
                     child: Padding(
-                      padding: const EdgeInsets.only(right: 180.0 ,left: 60),
+                      padding: const EdgeInsets.only(right: 180.0, left: 60),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -368,33 +373,31 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               'NBQS Award',
-                              style: TextStyle(fontWeight: FontWeight.w600,color: AppColor.appTeal,fontSize: 24),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColor.appTeal,
+                                  fontSize: 24),
                             ),
                           ),
-
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               'Chartered Institute for ICT, Colombo Chapter awarded the National Best Quality Software Award in 2019 for introducing the Taxation System for citizens and businesses to comply easily with their tax compliance obligations.',
-                              style: TextStyle(color:Colors.black,fontSize: 18),
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 18),
                             ),
                           ),
                         ],
                       ),
                     )),
-
-
-
-
               ],
             ),
-
             Row(
               children: [
                 Expanded(
                     flex: 3,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 180.0 ,right: 60),
+                      padding: const EdgeInsets.only(left: 180.0, right: 60),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -402,21 +405,23 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               'National Ingenuity Award',
-                              style: TextStyle(fontWeight: FontWeight.w600,color: AppColor.appTeal,fontSize: 24),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColor.appTeal,
+                                  fontSize: 24),
                             ),
                           ),
-
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               'The Sri Lanka Association of Software and Services Companies (SLASSCOM) awarded the National Ingenuity Award for the best innovation in business process management at the award ceremony held on 30th March 2021 in Shangri-La, Colombo.  ',
-                              style: TextStyle(color:Colors.black,fontSize: 18),
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 18),
                             ),
                           ),
                         ],
                       ),
                     )),
-
                 Expanded(
                   flex: 2,
                   child: Container(
@@ -430,12 +435,113 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     ),
                   ),
                 ),
-
-
-
-
               ],
             ),
+            SizedBox(
+              height: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15.0,
+              ),
+              child: Text(
+                'SERVE YOU WITH DIGITAL TAX SOLUTIONS',
+                style: TextStyle(
+                    fontSize: 28,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15.0,
+              ),
+              child: Text(
+                'We believe in doing your taxes right. We’re committed to serving you assuring your comfort in tax compliance decision',
+                style: TextStyle(
+                    fontSize: 18,
+                    color: AppColor.appTeal,
+                    fontWeight: FontWeight.w800),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+
+
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: p60,vertical: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ServicePageCard(
+                      title: 'Tax Advisory',
+                      description:
+                          'Taxation is a critical factor for every citizen and business. We provide advise in planning your personal tax and business tax to maximize the benefits',
+                      spaceHeight: 60,
+                    ),
+
+                    SizedBox(width: p30,),
+
+                    ServicePageCard(
+                      title: 'Tax Return',
+                      description:
+                      'We offer efficient and effective services in calculating and filing tax returns of citizens and businesses in Sri Lanka and overseas',
+                      spaceHeight: 60,
+                    ),
+
+                    SizedBox(width: p30,),
+
+                    ServicePageCard(
+                      title: 'Expat Tax',
+                      description:
+                      'As an expat employee, you need to pay taxes for the income you received from Sri Lanka and file the return of income',
+                      spaceHeight: 85,
+                    )
+                  ],
+                ),
+              ),
+            ),
+
+
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding:  EdgeInsets.symmetric(horizontal: p60,vertical: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ServicePageCard(
+                      title: 'Transfer Pricing',
+                      description:
+                      'Transfer pricing regulation in Sri Lanka is increasing and businesses with associated entities are required to file transfer pricing returns',
+                      spaceHeight: 60,
+                    ),
+
+                    SizedBox(width: p30,),
+
+                    ServicePageCard(
+                      title: 'Tax Calculator',
+                      description:
+                      'Calculate your quarterly income tax for free with Taxperts, covering the fiscal year from April 1st to March 31st. Stay updated on how tax changes affect you, all in one place',
+                      spaceHeight: 40,
+                    ),
+
+                    SizedBox(width: p30,),
+
+                    ServicePageCard(
+                      title: 'Tax Calendar',
+                      description:
+                      'A Tax Calendar is a comprehensive guide designed to assist individuals, businesses, and tax professionals in keeping track of important tax dates throughout the year',
+                      spaceHeight: 40,
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
