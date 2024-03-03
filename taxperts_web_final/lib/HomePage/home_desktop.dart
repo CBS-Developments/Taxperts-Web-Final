@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taxperts_web_final/colors.dart';
 import 'package:taxperts_web_final/sizes.dart';
 
+import '../Components/blogCard.dart';
 import '../Components/navBar.dart';
 import '../Components/service_page_card.dart';
 
@@ -13,6 +14,7 @@ class HomeDesktop extends StatefulWidget {
 }
 
 class _HomeDesktopState extends State<HomeDesktop> {
+  Map<int, bool> hoverStates = {};
   int _selectedIndex = 0;
 
   void _navigateTo(int index, String routeName) {
@@ -468,12 +470,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
             SizedBox(
               height: 40,
             ),
-
-
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: p60,vertical: 30),
+                padding: EdgeInsets.symmetric(horizontal: p60, vertical: 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -483,68 +483,289 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           'Taxation is a critical factor for every citizen and business. We provide advise in planning your personal tax and business tax to maximize the benefits',
                       spaceHeight: 60,
                     ),
-
-                    SizedBox(width: p30,),
-
+                    SizedBox(
+                      width: p30,
+                    ),
                     ServicePageCard(
                       title: 'Tax Return',
                       description:
-                      'We offer efficient and effective services in calculating and filing tax returns of citizens and businesses in Sri Lanka and overseas',
+                          'We offer efficient and effective services in calculating and filing tax returns of citizens and businesses in Sri Lanka and overseas',
                       spaceHeight: 60,
                     ),
-
-                    SizedBox(width: p30,),
-
+                    SizedBox(
+                      width: p30,
+                    ),
                     ServicePageCard(
                       title: 'Expat Tax',
                       description:
-                      'As an expat employee, you need to pay taxes for the income you received from Sri Lanka and file the return of income',
+                          'As an expat employee, you need to pay taxes for the income you received from Sri Lanka and file the return of income',
                       spaceHeight: 85,
                     )
                   ],
                 ),
               ),
             ),
-
-
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding:  EdgeInsets.symmetric(horizontal: p60,vertical: 30),
+                padding: EdgeInsets.symmetric(horizontal: p60, vertical: 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ServicePageCard(
                       title: 'Transfer Pricing',
                       description:
-                      'Transfer pricing regulation in Sri Lanka is increasing and businesses with associated entities are required to file transfer pricing returns',
+                          'Transfer pricing regulation in Sri Lanka is increasing and businesses with associated entities are required to file transfer pricing returns',
                       spaceHeight: 60,
                     ),
-
-                    SizedBox(width: p30,),
-
+                    SizedBox(
+                      width: p30,
+                    ),
                     ServicePageCard(
                       title: 'Tax Calculator',
                       description:
-                      'Calculate your quarterly income tax for free with Taxperts, covering the fiscal year from April 1st to March 31st. Stay updated on how tax changes affect you, all in one place',
+                          'Calculate your quarterly income tax for free with Taxperts, covering the fiscal year from April 1st to March 31st. Stay updated on how tax changes affect you, all in one place',
                       spaceHeight: 40,
                     ),
-
-                    SizedBox(width: p30,),
-
+                    SizedBox(
+                      width: p30,
+                    ),
                     ServicePageCard(
                       title: 'Tax Calendar',
                       description:
-                      'A Tax Calendar is a comprehensive guide designed to assist individuals, businesses, and tax professionals in keeping track of important tax dates throughout the year',
+                          'A Tax Calendar is a comprehensive guide designed to assist individuals, businesses, and tax professionals in keeping track of important tax dates throughout the year',
                       spaceHeight: 40,
                     )
                   ],
                 ),
               ),
-            )
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            Card(
+              elevation: 20.0,
+              shadowColor: Colors.black, // You can customize the shadow color
+              shape: RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(30.0), // Set the border radius here
+                side: BorderSide(
+                  color: AppColor.appLightBlue, // Set the border color here
+                  width: 1.0, // Set the border width here
+                ),
+              ),
+              child: Container(
+                width: 1040,
+                height: 504,
+                child: Row(
+                  children: [
+                    Image.asset('images/whych.png', height: 500),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    SizedBox(
+                      width: 500,
+                      height: 504,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Why Choose Us?',
+                            style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              "Experience Sri Lanka's First Online Taxation Service. Simplifying Taxes with a Click.?",
+                              style: TextStyle(
+                                  fontSize: 16, color: AppColor.appTeal),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                width: 3,
+                                height: 21,
+                                color: AppColor.appOrange,
+                                margin: EdgeInsets.only(
+                                    left: 10, right: 20, top: 10, bottom: 10),
+                              ),
+                              Text(
+                                'Ontime Service Delivery ',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 18,
+                                    color: Colors.black),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                width: 3,
+                                height: 21,
+                                color: AppColor.appOrange,
+                                margin: EdgeInsets.only(
+                                    left: 10, right: 20, top: 10, bottom: 10),
+                              ),
+                              Text(
+                                'Highly Confidential',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 18,
+                                    color: Colors.black),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                width: 3,
+                                height: 21,
+                                color: AppColor.appOrange,
+                                margin: EdgeInsets.only(
+                                    left: 10, right: 20, top: 10, bottom: 10),
+                              ),
+                              Text(
+                                'Accurate Tax Filling',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 18,
+                                    color: Colors.black),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                width: 3,
+                                height: 21,
+                                color: AppColor.appOrange,
+                                margin: EdgeInsets.only(
+                                    left: 10, right: 20, top: 10, bottom: 10),
+                              ),
+                              Text(
+                                'Avoid Tax Filling Penaltiesg',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 18,
+                                    color: Colors.black),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                width: 3,
+                                height: 21,
+                                color: AppColor.appOrange,
+                                margin: EdgeInsets.only(
+                                    left: 10, right: 20, top: 10, bottom: 10),
+                              ),
+                              Text(
+                                'Friendly Customer Service',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 18,
+                                    color: Colors.black),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15.0,
+              ),
+              child: Text(
+                'LATEST BLOG POST',
+                style: TextStyle(
+                    fontSize: 28,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15.0,
+              ),
+              child: Text(
+                'Connect with Taxperts Blog to get the latest development in the taxation domain',
+                style: TextStyle(
+                    fontSize: 18,
+                    color: AppColor.appTeal,
+                    fontWeight: FontWeight.w800),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(3, (index) {
+                  return MouseRegion(
+                    onEnter: (event) => _onEnter(index),
+                    onExit: (event) => _onExit(index),
+                    child: Transform.scale(
+                      scale: hoverStates[index] ?? false ? 1.3 : 1.0,
+                      child: BlogCard(),
+                    ),
+                  );
+                }),
+              ),
+            ),
           ],
         ),
       ),
     );
+  }
+
+  void _onEnter(int index) {
+    setState(() {
+      hoverStates[index] = true;
+    });
+  }
+
+  void _onExit(int index) {
+    setState(() {
+      hoverStates[index] = false;
+    });
   }
 }
