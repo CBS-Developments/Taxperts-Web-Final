@@ -481,7 +481,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       title: 'Tax Advisory',
                       description:
                           'Taxation is a critical factor for every citizen and business. We provide advise in planning your personal tax and business tax to maximize the benefits',
-                      spaceHeight: 60,
+                      spaceHeight: 40,
                     ),
                     SizedBox(
                       width: p30,
@@ -499,7 +499,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       title: 'Expat Tax',
                       description:
                           'As an expat employee, you need to pay taxes for the income you received from Sri Lanka and file the return of income',
-                      spaceHeight: 85,
+                      spaceHeight: 60,
                     )
                   ],
                 ),
@@ -516,7 +516,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       title: 'Transfer Pricing',
                       description:
                           'Transfer pricing regulation in Sri Lanka is increasing and businesses with associated entities are required to file transfer pricing returns',
-                      spaceHeight: 60,
+                      spaceHeight: 40,
                     ),
                     SizedBox(
                       width: p30,
@@ -734,22 +734,41 @@ class _HomeDesktopState extends State<HomeDesktop> {
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 60,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
+              child: Wrap(
+                spacing: 80, // Horizontal space between cards
+                runSpacing: 60, // Vertical space between lines
                 children: List.generate(3, (index) {
+                  // Define the image paths and dates for each card
+                  final imagePath = index == 0 ? 'images/blog1.png' : index == 1 ? 'images/blog2.png' : 'images/blog3.png';
+                  final topic = index == 0 ? 'Impact of digital adoption for tax revenue' : index == 1 ? 'Tradeoff between direct taxes and indirect taxes' : 'Service Oriented Tax System';
+                  final date = index == 0
+                      ? '20\nFeb' // Using \n to insert a newline character
+                      : index == 1
+                      ? '21\nFeb' // Another newline character
+                      : '22\nFeb'; // And another one
+
+
                   return MouseRegion(
                     onEnter: (event) => _onEnter(index),
                     onExit: (event) => _onExit(index),
                     child: Transform.scale(
                       scale: hoverStates[index] ?? false ? 1.3 : 1.0,
-                      child: BlogCard(),
+                      child: BlogCard(
+                        imagePath: imagePath,
+                        date: date, topic: topic,
+                      ),
                     ),
                   );
                 }),
               ),
+            ),
+
+            SizedBox(
+              height: 60,
             ),
           ],
         ),

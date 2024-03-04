@@ -28,8 +28,8 @@ class ServicePageCard extends StatelessWidget {
         ),
       ),
       child: Container(
-        width: 360,
-        height: 315,
+        width: 320,
+        height: 280,
         padding: EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +50,7 @@ class ServicePageCard extends StatelessWidget {
                 description,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 13,
                 ),
               ),
             ),
