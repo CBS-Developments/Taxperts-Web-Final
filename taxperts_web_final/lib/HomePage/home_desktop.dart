@@ -768,8 +768,64 @@ class _HomeDesktopState extends State<HomeDesktop> {
             ),
 
             SizedBox(
-              height: 60,
+              height: 150,
             ),
+
+            Center(
+              child: Container(
+                width: 1040, // Adjust to the width of your design
+                height: 184, // Adjust to the height of your design
+
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Image.asset(
+                        'images/ContactHome.png', // Replace with your background image
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+
+
+                    Positioned(
+                      left: 430, // Adjust the positioning as per your design
+                      bottom: 10,
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            // Handle button press
+                          },
+                          child: Text(
+                            'Contact Us',
+                            style: TextStyle(
+                              fontSize: 16, // Set your desired font size here
+                              // Optional: Set font weight
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: AppColor.appOrange, // Button background color
+                            onPrimary: Colors.white, // Button text color
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25), // Rounded button
+                            ),
+                            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16), // Set your desired padding here
+                            minimumSize: Size(180, 48), // Set the button's size here
+                          ),
+                        ),
+
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+
+            SizedBox(
+              height: 90,
+            ),
+
+
           ],
         ),
       ),
