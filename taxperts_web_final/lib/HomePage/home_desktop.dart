@@ -3,6 +3,7 @@ import 'package:taxperts_web_final/colors.dart';
 import 'package:taxperts_web_final/sizes.dart';
 
 import '../Components/blogCard.dart';
+import '../Components/footer.dart';
 import '../Components/navBar.dart';
 import '../Components/service_page_card.dart';
 
@@ -31,6 +32,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
     double p60 = screenWidth / 30;
     double p15 = screenWidth / 120;
     double p20 = screenWidth / 90;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -543,162 +545,165 @@ class _HomeDesktopState extends State<HomeDesktop> {
             SizedBox(
               height: 60,
             ),
-            Card(
-              elevation: 20.0,
-              shadowColor: Colors.black, // You can customize the shadow color
-              shape: RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.circular(30.0), // Set the border radius here
-                side: BorderSide(
-                  color: AppColor.appLightBlue, // Set the border color here
-                  width: 1.0, // Set the border width here
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Card(
+                elevation: 20.0,
+                shadowColor: Colors.black, // You can customize the shadow color
+                shape: RoundedRectangleBorder(
+                  borderRadius:
+                      BorderRadius.circular(30.0), // Set the border radius here
+                  side: BorderSide(
+                    color: AppColor.appLightBlue, // Set the border color here
+                    width: 1.0, // Set the border width here
+                  ),
                 ),
-              ),
-              child: Container(
-                width: 1040,
-                height: 504,
-                child: Row(
-                  children: [
-                    Image.asset('images/whych.png', height: 500),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    SizedBox(
-                      width: 500,
-                      height: 504,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Why Choose Us?',
-                            style: TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.black),
-                          ),
-                          SizedBox(
-                            height: 15,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Experience Sri Lanka's First Online Taxation Service. Simplifying Taxes with a Click.?",
-                              style: TextStyle(
-                                  fontSize: 16, color: AppColor.appTeal),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                width: 3,
-                                height: 21,
-                                color: AppColor.appOrange,
-                                margin: EdgeInsets.only(
-                                    left: 10, right: 20, top: 10, bottom: 10),
-                              ),
-                              Text(
-                                'Ontime Service Delivery ',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 18,
-                                    color: Colors.black),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                width: 3,
-                                height: 21,
-                                color: AppColor.appOrange,
-                                margin: EdgeInsets.only(
-                                    left: 10, right: 20, top: 10, bottom: 10),
-                              ),
-                              Text(
-                                'Highly Confidential',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 18,
-                                    color: Colors.black),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                width: 3,
-                                height: 21,
-                                color: AppColor.appOrange,
-                                margin: EdgeInsets.only(
-                                    left: 10, right: 20, top: 10, bottom: 10),
-                              ),
-                              Text(
-                                'Accurate Tax Filling',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 18,
-                                    color: Colors.black),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                width: 3,
-                                height: 21,
-                                color: AppColor.appOrange,
-                                margin: EdgeInsets.only(
-                                    left: 10, right: 20, top: 10, bottom: 10),
-                              ),
-                              Text(
-                                'Avoid Tax Filling Penaltiesg',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 18,
-                                    color: Colors.black),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                width: 3,
-                                height: 21,
-                                color: AppColor.appOrange,
-                                margin: EdgeInsets.only(
-                                    left: 10, right: 20, top: 10, bottom: 10),
-                              ),
-                              Text(
-                                'Friendly Customer Service',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 18,
-                                    color: Colors.black),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                        ],
+                child: Container(
+                  width: 1040,
+                  height: 504,
+                  child: Row(
+                    children: [
+                      Image.asset('images/whych.png', height: 500),
+                      SizedBox(
+                        width: 15,
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        width: 500,
+                        height: 504,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Why Choose Us?',
+                              style: TextStyle(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.black),
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Experience Sri Lanka's First Online Taxation Service. Simplifying Taxes with a Click.?",
+                                style: TextStyle(
+                                    fontSize: 16, color: AppColor.appTeal),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  width: 3,
+                                  height: 21,
+                                  color: AppColor.appOrange,
+                                  margin: EdgeInsets.only(
+                                      left: 10, right: 20, top: 10, bottom: 10),
+                                ),
+                                Text(
+                                  'Ontime Service Delivery ',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w800,
+                                      fontSize: 18,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  width: 3,
+                                  height: 21,
+                                  color: AppColor.appOrange,
+                                  margin: EdgeInsets.only(
+                                      left: 10, right: 20, top: 10, bottom: 10),
+                                ),
+                                Text(
+                                  'Highly Confidential',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w800,
+                                      fontSize: 18,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  width: 3,
+                                  height: 21,
+                                  color: AppColor.appOrange,
+                                  margin: EdgeInsets.only(
+                                      left: 10, right: 20, top: 10, bottom: 10),
+                                ),
+                                Text(
+                                  'Accurate Tax Filling',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w800,
+                                      fontSize: 18,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  width: 3,
+                                  height: 21,
+                                  color: AppColor.appOrange,
+                                  margin: EdgeInsets.only(
+                                      left: 10, right: 20, top: 10, bottom: 10),
+                                ),
+                                Text(
+                                  'Avoid Tax Filling Penaltiesg',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w800,
+                                      fontSize: 18,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  width: 3,
+                                  height: 21,
+                                  color: AppColor.appOrange,
+                                  margin: EdgeInsets.only(
+                                      left: 10, right: 20, top: 10, bottom: 10),
+                                ),
+                                Text(
+                                  'Friendly Customer Service',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w800,
+                                      fontSize: 18,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -743,14 +748,21 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 runSpacing: 60, // Vertical space between lines
                 children: List.generate(3, (index) {
                   // Define the image paths and dates for each card
-                  final imagePath = index == 0 ? 'images/blog1.png' : index == 1 ? 'images/blog2.png' : 'images/blog3.png';
-                  final topic = index == 0 ? 'Impact of digital adoption for tax revenue' : index == 1 ? 'Tradeoff between direct taxes and indirect taxes' : 'Service Oriented Tax System';
+                  final imagePath = index == 0
+                      ? 'images/blog1.png'
+                      : index == 1
+                          ? 'images/blog2.png'
+                          : 'images/blog3.png';
+                  final topic = index == 0
+                      ? 'Impact of digital adoption for tax revenue'
+                      : index == 1
+                          ? 'Tradeoff between direct taxes and indirect taxes'
+                          : 'Service Oriented Tax System';
                   final date = index == 0
                       ? '20\nFeb' // Using \n to insert a newline character
                       : index == 1
-                      ? '21\nFeb' // Another newline character
-                      : '22\nFeb'; // And another one
-
+                          ? '21\nFeb' // Another newline character
+                          : '22\nFeb'; // And another one
 
                   return MouseRegion(
                     onEnter: (event) => _onEnter(index),
@@ -759,18 +771,17 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       scale: hoverStates[index] ?? false ? 1.3 : 1.0,
                       child: BlogCard(
                         imagePath: imagePath,
-                        date: date, topic: topic,
+                        date: date,
+                        topic: topic,
                       ),
                     ),
                   );
                 }),
               ),
             ),
-
             SizedBox(
               height: 150,
             ),
-
             Center(
               child: Container(
                 width: 1040, // Adjust to the width of your design
@@ -784,8 +795,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         fit: BoxFit.fitWidth,
                       ),
                     ),
-
-
                     Positioned(
                       left: 430, // Adjust the positioning as per your design
                       bottom: 10,
@@ -803,29 +812,30 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                            primary: AppColor.appOrange, // Button background color
+                            primary:
+                                AppColor.appOrange, // Button background color
                             onPrimary: Colors.white, // Button text color
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25), // Rounded button
+                              borderRadius:
+                                  BorderRadius.circular(25), // Rounded button
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16), // Set your desired padding here
-                            minimumSize: Size(180, 48), // Set the button's size here
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 32,
+                                vertical: 16), // Set your desired padding here
+                            minimumSize:
+                                Size(180, 48), // Set the button's size here
                           ),
                         ),
-
                       ),
                     ),
                   ],
                 ),
               ),
             ),
-
-
             SizedBox(
               height: 90,
             ),
-
-
+            Footer(),
           ],
         ),
       ),
