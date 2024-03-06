@@ -67,6 +67,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
     double p30 = screenWidth / 60;
     double p60 = screenWidth / 30;
     double p15 = screenWidth / 120;
+    double p120 = screenWidth / 15;
     double p20 = screenWidth / 90;
 
     return Scaffold(
@@ -514,7 +515,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
               child: Text(
-                'AWARD WINNING TAXATION-AS-A-SERVICE COMPANY IN SRI LANKA',
+                'EXCELLENCE IN TAX SIMPLIFICATION: SRI LANKA"S AWARD-WINNING TAX SERVICE COMPANY',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 28,
                     color: Colors.black,
@@ -534,21 +536,32 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: Text(
                               'Digital Social Impact Award',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: AppColor.appTeal,
+                                  color: Colors.black,
                                   fontSize: 24),
                             ),
                           ),
+
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: Text(
-                              'The Information Communication Agency in Sri Lanka (ICTA) was awarded the digital social impact ward in 2019 for digitalizing the tax compliance system first time in Sri Lanka.',
+                              'Recognizing Our Pioneering Digital Tax Compliance Service in Sri Lanka',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColor.appTeal,
+                                  fontSize: 20),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Text(
+                              "We're honoured to receive the Digital Social Impact Award from the Information Communication Agency of Sri Lanka (ICTA) for introducing Sri Lanka's first digital tax compliance service. This groundbreaking initiative simplifies tax filing, making it more accessible and efficient for everyone. 'Thanks to this service, filing taxes is no longer a daunting task for me,' says Kanishka Weeramunda, a local entrepreneur, highlighting the profound impact on our community. This award sets a new standard for leveraging technology in tax compliance services. Stay tuned for how we plan to build on this achievement to further innovate and serve you better.",
                               style:
-                                  TextStyle(color: Colors.black, fontSize: 18),
+                                  TextStyle(color: Colors.black, fontSize: 16),
                             ),
                           ),
                         ],
@@ -592,21 +605,33 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: Text(
                               'NBQS Award',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: AppColor.appTeal,
+                                  color: Colors.black,
                                   fontSize: 24),
                             ),
                           ),
+
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: Text(
-                              'Chartered Institute for ICT, Colombo Chapter awarded the National Best Quality Software Award in 2019 for introducing the Taxation System for citizens and businesses to comply easily with their tax compliance obligations.',
+                              'A Milestone for Tax Compliance Innovation',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColor.appTeal,
+                                  fontSize: 20),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Text(
+                              'We are proud to announce that the Chartered Institute for ICT, Colombo Chapter, has honoured us with the National Best Quality Software Award (NBQSA) for our pioneering tax computation system. This system, designed with both citizens and businesses in mind, simplifies the tax compliance process, making it more accessible and efficient than ever before. Our innovative approach to tax computation has not only streamlined the filing process but has also significantly reduced the potential for errors, enhancing user satisfaction across the board.',
                               style:
-                                  TextStyle(color: Colors.black, fontSize: 18),
+                                  TextStyle(color: Colors.black, fontSize: 16),
                             ),
                           ),
                         ],
@@ -624,21 +649,33 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: Text(
                               'National Ingenuity Award',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: AppColor.appTeal,
+                                  color: Colors.black,
+                                  fontSize: 24),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Text(
+                              'A Revolution in Tax Compliance Business Process Management',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color:AppColor.appTeal,
                                   fontSize: 24),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: Text(
-                              'The Sri Lanka Association of Software and Services Companies (SLASSCOM) awarded the National Ingenuity Award for the best innovation in business process management at the award ceremony held on 30th March 2021 in Shangri-La, Colombo.  ',
+                              '''We are immensely proud to share that the Sri Lanka Association of Software and Services Companies (SLASSCOM) has honored us with the prestigious National Ingenuity Award. This award celebrates our leading-edge solution in business process management, specifically designed to enhance efficiency and effectiveness in the tax compliance sector. \n \nOur innovative approach, merging advanced technology with user-friendly design, has set new standards in how businesses manage their tax compliance workflows. This transformation has resulted in unparalleled productivity gains and significantly improved customer satisfaction levels. It's a clear indicator of our commitment to pushing boundaries and fostering innovation within our industry. \n \nExperience the innovation firsthand that's reshaping business process management in the tax compliance sphere. For a deeper dive into our award-winning solution and to discover how it can transform your business operations, we invite you to visit our website or reach out directly to our team. Let's elevate your business processes together.
+                            ''',
                               style:
-                                  TextStyle(color: Colors.black, fontSize: 18),
+                                  TextStyle(color: Colors.black, fontSize: 16),
                             ),
                           ),
                         ],
@@ -663,30 +700,54 @@ class _HomeDesktopState extends State<HomeDesktop> {
               height: 40,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 15.0,
-              ),
-              child: Text(
-                'SERVE YOU WITH DIGITAL TAX SOLUTIONS',
-                style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w600),
+              padding:  EdgeInsets.symmetric(horizontal: p120),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0,
+                    ),
+                    child: Text(
+                      'DIGITAL TAX SOLUTIONS TAILORED JUST',
+                      style: TextStyle(
+                          fontSize: 28,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0,
+                    ),
+                    child: Text(
+                      "We're Here to Get Your Tax Right with Taxperts",
+                      style: TextStyle(
+                          fontSize: 22,
+                          color: AppColor.appTeal,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0,
+                    ),
+                    child: Text(
+                      'Embark on a journey to stress-free tax compliance with Taxperts, where our dedication to precision and your peace of mind comes first. Ready to change the way you think about taxes? Discover the Taxperts difference today',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 15.0,
-              ),
-              child: Text(
-                'We believe in doing your taxes right. We’re committed to serving you assuring your comfort in tax compliance decision',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: AppColor.appTeal,
-                    fontWeight: FontWeight.w800),
-                textAlign: TextAlign.center,
-              ),
-            ),
+
+
             SizedBox(
               height: 40,
             ),
