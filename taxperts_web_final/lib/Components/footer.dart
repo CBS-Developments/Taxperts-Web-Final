@@ -17,7 +17,7 @@ class Footer extends StatelessWidget {
     double fontSize = 16;
     return Container(
       width: double.infinity,
-      height: 500, // Adjust the height as needed
+      height: 405, // Adjust the height as needed
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.centerLeft,
@@ -32,7 +32,7 @@ class Footer extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding:  EdgeInsets.symmetric(vertical: 30.0,horizontal: p90),
+            padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: p90),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -44,10 +44,9 @@ class Footer extends StatelessWidget {
                         child: Text(
                           'Home',
                           style: TextStyle(
-                            fontSize: fontSize,
-                            color:Colors.white,
-                            fontWeight: FontWeight.w600
-                          ),
+                              fontSize: fontSize,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         )),
                     Container(
                       height: 15, // Set the vertical divider height to 20
@@ -57,16 +56,14 @@ class Footer extends StatelessWidget {
                         width: p20,
                       ),
                     ),
-
                     TextButton(
                         onPressed: () {},
                         child: Text(
                           'Tax Calculator',
                           style: TextStyle(
                               fontSize: fontSize,
-                              color:Colors.white,
-                              fontWeight: FontWeight.w600
-                          ),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         )),
                     Container(
                       height: 15, // Set the vertical divider height to 20
@@ -76,16 +73,14 @@ class Footer extends StatelessWidget {
                         width: p20,
                       ),
                     ),
-
                     TextButton(
                         onPressed: () {},
                         child: Text(
                           'Services',
                           style: TextStyle(
                               fontSize: fontSize,
-                              color:Colors.white,
-                              fontWeight: FontWeight.w600
-                          ),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         )),
                     Container(
                       height: 15, // Set the vertical divider height to 20
@@ -95,17 +90,14 @@ class Footer extends StatelessWidget {
                         width: p20,
                       ),
                     ),
-
-
                     TextButton(
                         onPressed: () {},
                         child: Text(
                           'Resources',
                           style: TextStyle(
                               fontSize: fontSize,
-                              color:Colors.white,
-                              fontWeight: FontWeight.w600
-                          ),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         )),
                     Container(
                       height: 15, // Set the vertical divider height to 20
@@ -115,17 +107,14 @@ class Footer extends StatelessWidget {
                         width: p20,
                       ),
                     ),
-
-
                     TextButton(
                         onPressed: () {},
                         child: Text(
                           'Blog',
                           style: TextStyle(
                               fontSize: fontSize,
-                              color:Colors.white,
-                              fontWeight: FontWeight.w600
-                          ),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         )),
                     Container(
                       height: 15, // Set the vertical divider height to 20
@@ -135,16 +124,14 @@ class Footer extends StatelessWidget {
                         width: p20,
                       ),
                     ),
-
                     TextButton(
                         onPressed: () {},
                         child: Text(
                           'Contact',
                           style: TextStyle(
                               fontSize: fontSize,
-                              color:Colors.white,
-                              fontWeight: FontWeight.w600
-                          ),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         )),
                     Container(
                       height: 15, // Set the vertical divider height to 20
@@ -154,133 +141,147 @@ class Footer extends StatelessWidget {
                         width: p20,
                       ),
                     ),
-
                     TextButton(
                         onPressed: () {},
                         child: Text(
                           'FAQs',
                           style: TextStyle(
                               fontSize: fontSize,
-                              color:Colors.white,
-                              fontWeight: FontWeight.w600
-                          ),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         )),
-
-
                   ],
                 )
               ],
             ),
           ),
-
-
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
-              padding:  EdgeInsets.symmetric(horizontal: p120),
+              padding: EdgeInsets.symmetric(horizontal: p120),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child:  Icon(
-                        Icons.email_rounded,
-                        color: Colors.white,
-                      ),
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p20),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Icon(
+                            Icons.email_rounded,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: SelectableText(
+                            'connect@taxperts.lk',
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                          ),
+                        ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: SelectableText(
-                        'connect@taxperts.lk',
-                        style:
-                        TextStyle(fontSize: 16, color: Colors.white),
-                      ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p20),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Icon(
+                            Icons.phone_in_talk_rounded,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: SelectableText(
+                            ' \n077 7 145 347\n011 2 424 922',
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                          ),
+                        ),
+                      ],
                     ),
-
-                  ],
-
-                ),
-
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child:  Icon(
-                        Icons.phone_in_talk_rounded,
-                        color: Colors.white,
-                      ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p20),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Icon(
+                            Icons.location_on,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: SelectableText(
+                            'No. 101, Olcott Mawatha, Colombo 11',
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                          ),
+                        ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: SelectableText(
-                        ' \n077 7 145 347\n011 2 424 922',
-                        style:
-                        TextStyle(fontSize: 16, color: Colors.white),
-                      ),
-                    ),
-
-                  ],
-
-                ),
-
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child:  Icon(
-                        Icons.location_on,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: SelectableText(
-                        'No. 101, Olcott Mawatha, Colombo 11',
-                        style:
-                        TextStyle(fontSize: 16, color: Colors.white),
-                      ),
-                    ),
-
-                  ],
-
-                ),
-
-
-
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child:   Icon(
-                        Icons.watch_later_rounded,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: SelectableText(
-                        ' \n'
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p20),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Icon(
+                            Icons.watch_later_rounded,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: SelectableText(
+                            ' \n'
                             'Monday - Friday: 8.30 - 17.30\n'
                             'Saturday : 9.00 - 01.00',
-                        style:
-                        TextStyle(fontSize: 16, color: Colors.white),
-                      ),
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                          ),
+                        ),
+                      ],
                     ),
-
-                  ],
-
-                ),
-
-
-              ],),
+                  ),
+                ],
+              ),
             ),
-          )
-
-
-
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                  child: Image.asset('images/fbIcon.png', height: 50)),
+              GestureDetector(
+                  child: Image.asset('images/twitIcon.png', height: 50)),
+              GestureDetector(
+                  child: Image.asset('images/likdinIcon.png', height: 50)),
+              GestureDetector(
+                  child: Image.asset('images/ytIcon.png', height: 50)),
+            ],
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Divider(
+            color: AppColor.appLightBlue,
+            thickness: 2,
+          ),
+          Center(
+              child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 15.0),
+            child: Text(
+              '© Copyright Taxperts 2024. All Rights Reserved',
+              style: TextStyle(fontSize: 14, color: Colors.white),
+            ),
+          ))
         ],
       ),
     );
