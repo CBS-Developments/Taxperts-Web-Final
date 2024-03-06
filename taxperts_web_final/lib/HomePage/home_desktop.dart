@@ -1,3 +1,4 @@
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:taxperts_web_final/colors.dart';
 import 'package:taxperts_web_final/sizes.dart';
@@ -15,6 +16,41 @@ class HomeDesktop extends StatefulWidget {
 }
 
 class _HomeDesktopState extends State<HomeDesktop> {
+  final Map<int, GlobalKey<FlipCardState>> cardKeys = {};
+
+  @override
+  void initState() {
+    super.initState();
+    // Initialize keys for each card
+    for (int i = 0; i < 5; i++) {
+      cardKeys[i] = GlobalKey<FlipCardState>();
+    }
+  }
+
+  final List<Map<String, String>> cardData = [
+    {
+      'frontImage': 'images/IIT.png',
+      'backImage': 'images/IITback.png',
+    },
+    {
+      'frontImage': 'images/CorporateITax.png',
+      'backImage': 'images/CorporateITaxback.png',
+    },
+    {
+      'frontImage': 'images/PartnershipITax.png',
+      'backImage': 'images/PartnershipITaxback.png',
+    },
+    {
+      'frontImage': 'images/VAT.png',
+      'backImage': 'images/VATback.png',
+    },
+    {
+      'frontImage': 'images/SSCL.png',
+      'backImage': 'images/SSCLback.png',
+    },
+    // Add more image pairs if you have more than 5 cards
+  ];
+
   Map<int, bool> hoverStates = {};
   int _selectedIndex = 0;
 
@@ -224,14 +260,14 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ],
               ),
             ),
-
-            SizedBox(height: 80,),
-
+            SizedBox(
+              height: 80,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: p60),
+                  padding: EdgeInsets.symmetric(horizontal: p60),
                   child: Column(
                     children: [
                       Text(
@@ -241,11 +277,11 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             color: Colors.black,
                             fontWeight: FontWeight.w600),
                       ),
-
                       Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15.0, vertical: 10),
                             child: ElevatedButton(
                               onPressed: () {
                                 // Handle button tap
@@ -268,10 +304,9 @@ class _HomeDesktopState extends State<HomeDesktop> {
                               ),
                             ),
                           ),
-
-
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15.0, vertical: 10),
                             child: ElevatedButton(
                               onPressed: () {
                                 // Handle button tap
@@ -282,13 +317,12 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     'Read More',
                                     style: TextStyle(fontSize: 14),
                                   ),
-
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 1.0,left: 2),
+                                    padding: const EdgeInsets.only(
+                                        top: 1.0, left: 2),
                                     child: Icon(
                                       Icons.keyboard_double_arrow_right_rounded,
-                                      color:
-                                      Colors.white, // Icon color green
+                                      color: Colors.white, // Icon color green
                                       size: 20,
                                     ),
                                   ),
@@ -310,15 +344,11 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           ),
                         ],
                       ),
-
-
                     ],
                   ),
                 ),
-
-
                 Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: p60),
+                  padding: EdgeInsets.symmetric(horizontal: p60),
                   child: Column(
                     children: [
                       Text(
@@ -328,11 +358,11 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             color: Colors.black,
                             fontWeight: FontWeight.w600),
                       ),
-
                       Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15.0, vertical: 10),
                             child: ElevatedButton(
                               onPressed: () {
                                 // Handle button tap
@@ -355,10 +385,9 @@ class _HomeDesktopState extends State<HomeDesktop> {
                               ),
                             ),
                           ),
-
-
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15.0, vertical: 10),
                             child: ElevatedButton(
                               onPressed: () {
                                 // Handle button tap
@@ -369,13 +398,12 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     'Read More',
                                     style: TextStyle(fontSize: 14),
                                   ),
-
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 1.0,left: 2),
+                                    padding: const EdgeInsets.only(
+                                        top: 1.0, left: 2),
                                     child: Icon(
                                       Icons.keyboard_double_arrow_right_rounded,
-                                      color:
-                                      Colors.white, // Icon color green
+                                      color: Colors.white, // Icon color green
                                       size: 20,
                                     ),
                                   ),
@@ -397,20 +425,14 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           ),
                         ],
                       ),
-
-
                     ],
                   ),
                 ),
-
               ],
             ),
-
-
-            SizedBox(height: 60,),
-
-
-
+            SizedBox(
+              height: 60,
+            ),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
@@ -428,30 +450,39 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: p20),
-                      child: Image.asset('images/IIT.png', height: 196),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: p20),
-                      child:
-                          Image.asset('images/CorporateITax.png', height: 196),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: p20),
-                      child: Image.asset('images/PartnershipITax.png',
-                          height: 196),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: p20),
-                      child: Image.asset('images/VAT.png', height: 196),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: p20),
-                      child: Image.asset('images/SSCL.png', height: 196),
-                    ),
-                  ],
+                  children: cardData.asMap().entries.map((entry) {
+                    int idx = entry.key;
+                    Map<String, String> card = entry.value;
+
+                    return MouseRegion(
+                      onEnter: (_) {
+                        // Flip the card when the mouse enters
+                        final key = cardKeys[idx];
+                        key?.currentState?.toggleCard();
+                      },
+                      onExit: (_) {
+                        // Reset the card to its original state when the mouse exits
+                        final key = cardKeys[idx];
+                        key?.currentState?.toggleCard();
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: p20),
+                        child: FlipCard(
+                          key:
+                              cardKeys[idx], // Assign a unique key to each card
+                          flipOnTouch: false, // Disable flipping on touch
+                          direction: FlipDirection.HORIZONTAL,
+                          front: Card(
+                            child:
+                                Image.asset(card['frontImage']!, height: 196),
+                          ),
+                          back: Card(
+                            child: Image.asset(card['backImage']!, height: 196),
+                          ),
+                        ),
+                      ),
+                    );
+                  }).toList(),
                 ),
               ),
             ),
