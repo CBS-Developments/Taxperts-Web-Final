@@ -76,7 +76,7 @@ class _ContactDesktopState extends State<ContactDesktop> {
                   Positioned.fill(
                     child: Image.asset(
                       'images/contact650.png', // Replace with your background image
-                      fit: BoxFit.fitHeight,
+                      fit: BoxFit.cover,
                     ),
                   ),
                   // Centered Column for text and button overlay
