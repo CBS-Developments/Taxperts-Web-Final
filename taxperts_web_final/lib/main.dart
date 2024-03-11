@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'ContactPage/contact.dart';
+import 'FormPage/form.dart';
 import 'HomePage/home.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           '/contact': (context) => ContactPage(),
           // '/home': (context) => HomePage(),
           // '/blog': (context) => BlogPage(),
-          // '/start': (context) => FormPage(),
+          '/start': (context) => FormPage(),
           // '/services': (context) => ServicePage(),
           // '/tax-calculator': (context) => CalculatorPage(),
           // '/Beneficiaries': (context) => BeneficiariesPage(),
