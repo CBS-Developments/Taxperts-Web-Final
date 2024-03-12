@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'ContactPage/contact.dart';
 import 'FormPage/form.dart';
 import 'HomePage/home.dart';
+import 'ServicePage/service.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           // '/home': (context) => HomePage(),
           // '/blog': (context) => BlogPage(),
           '/start': (context) => FormPage(),
-          // '/services': (context) => ServicePage(),
+          '/services': (context) => ServicePage(),
           // '/tax-calculator': (context) => CalculatorPage(),
           // '/Beneficiaries': (context) => BeneficiariesPage(),
           // '/createBeneficiaries': (context) => CreateBeneficiariesPage(),
