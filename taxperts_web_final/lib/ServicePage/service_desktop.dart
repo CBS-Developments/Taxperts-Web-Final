@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Components/navBar.dart';
+import '../Components/service_card.dart';
 import '../colors.dart';
 
 class ServiceDesktop extends StatefulWidget {
@@ -76,19 +77,19 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                 children: <Widget>[
                   Positioned.fill(
                     child: Image.asset(
-                      'images/contact650.png', // Replace with your background image
+                      'images/service650.png', // Replace with your background image
                       fit: BoxFit.cover,
                     ),
                   ),
                   // Centered Column for text and button overlay
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'CONTACT',
+                          'SERVICES',
                           style: TextStyle(
                             fontSize: 60,
                             color: AppColor.appTeal,
@@ -96,9 +97,22 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          padding: const EdgeInsets.only(bottom: 10.0),
                           child: Text(
-                            '''Contact us for more detail''',
+                            '''Get Your Taxes Done Right with Taxperts''',
+                            style: TextStyle(
+                              fontSize: 26,
+                              color: Colors
+                                  .black,
+                              fontWeight: FontWeight.w600
+                            ),
+                          ),
+                        ),
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal:2.0),
+                          child: Text(
+                            '''Embark on a journey to stress-free tax compliance with Taxperts, \nwhere our dedication to precision and your peace of mind comes first. \nReady to change the way you think about taxes? \nDiscover the Taxperts difference today.''',
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors
@@ -106,114 +120,22 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 60),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                          child: Row(
-                            children: [
-                              Container(
-                                child: Icon(
-                                  Icons.call_outlined,
-                                  color: Colors.white,
-                                ),
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                    color: AppColor.appTeal,
-                                    borderRadius: BorderRadius.circular(50)),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 15.0),
-                                child: Text(
-                                  '+94 77 7 148 839',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                              Container(
-                                width: 2,
-                                height: 20,
-                                color: Colors.black,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 15.0),
-                                child: Text(
-                                  '+94 77 7 148 839',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                          child: Row(
-                            children: [
-                              Container(
-                                child: Icon(
-                                  Icons.email_outlined,
-                                  color: Colors.white,
-                                ),
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                    color: AppColor.appTeal,
-                                    borderRadius: BorderRadius.circular(50)),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 15.0),
-                                child: Text(
-                                  'connect@taxperts.lk',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                          child: Row(
-                            children: [
-                              Container(
-                                child: Icon(
-                                  Icons.location_on_outlined,
-                                  color: Colors.white,
-                                ),
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                    color: AppColor.appTeal,
-                                    borderRadius: BorderRadius.circular(50)),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 15.0),
-                                child: Text(
-                                  "\nTaxperts Lanka Pvt. Ltd \nNo. 101, Olcott Mawatha, Colombo 11. \nSri Lanka",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+
+                        const SizedBox(height: 30),
+
+
+
                       ],
                     ),
                   ),
                 ],
               ),
+            ),
+
+            Row(
+              children: [
+                ServiceCard(imagePath: 'images/ser01.png', serviceDescription: 'Taxation is a critical factor for every citizen and business. We provide advise in planning your personal tax and business tax to maximize the benefits', serviceTopic: 'Tax Advisory Service ',)
+              ],
             ),
             Text('Service Desktop'),
           ],

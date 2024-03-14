@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+import 'package:taxperts_web_final/colors.dart';
+
+class ServiceCard extends StatelessWidget {
+  final String imagePath;
+  final String serviceDescription;
+  final String serviceTopic;
+
+  const ServiceCard({
+    Key? key,
+    required this.imagePath,
+    required this.serviceDescription, required this.serviceTopic,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 450,
+      height: 600,
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              serviceTopic,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w600,
+                color: AppColor.appTeal
+              ),
+            ),
+          ),
+          Image.asset(
+            imagePath,
+            fit: BoxFit.cover,
+            width: 330,
+            height: 250,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              serviceDescription,
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
