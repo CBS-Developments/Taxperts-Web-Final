@@ -14,13 +14,16 @@ class ServiceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    double screenWidth = MediaQuery.of(context).size.width;
+    double p30 = screenWidth / 60;
+    double p15 = screenWidth / 120;
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: p30),
       width: 450,
-      height: 600,
       child: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 20),
             child: Text(
               serviceTopic,
               style: TextStyle(
@@ -37,7 +40,7 @@ class ServiceCard extends StatelessWidget {
             height: 250,
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 60, top: 30),
             child: Text(
               serviceDescription,
               style: TextStyle(

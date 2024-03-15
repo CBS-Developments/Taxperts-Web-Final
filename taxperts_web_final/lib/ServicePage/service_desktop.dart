@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Components/footer.dart';
 import '../Components/navBar.dart';
 import '../Components/service_card.dart';
 import '../colors.dart';
@@ -50,12 +51,12 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                 // If you also want to round the corners of the container
               ),
               height:
-              100, // Set the container height to match the AppBar height
+                  100, // Set the container height to match the AppBar height
               child: Row(
                 crossAxisAlignment:
-                CrossAxisAlignment.center, // Center the Row vertically
+                    CrossAxisAlignment.center, // Center the Row vertically
                 mainAxisAlignment:
-                MainAxisAlignment.spaceBetween, // Space items horizontally
+                    MainAxisAlignment.spaceBetween, // Space items horizontally
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(left: 50.0),
@@ -68,7 +69,6 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                 ],
               ),
             ),
-
             Container(
               padding: EdgeInsets.symmetric(horizontal: p30),
               height: 650,
@@ -101,16 +101,13 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                           child: Text(
                             '''Get Your Taxes Done Right with Taxperts''',
                             style: TextStyle(
-                              fontSize: 26,
-                              color: Colors
-                                  .black,
-                              fontWeight: FontWeight.w600
-                            ),
+                                fontSize: 26,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600),
                           ),
                         ),
-
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal:2.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 2.0),
                           child: Text(
                             '''Embark on a journey to stress-free tax compliance with Taxperts, \nwhere our dedication to precision and your peace of mind comes first. \nReady to change the way you think about taxes? \nDiscover the Taxperts difference today.''',
                             style: TextStyle(
@@ -120,24 +117,120 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                             ),
                           ),
                         ),
-
                         const SizedBox(height: 30),
-
-
-
                       ],
                     ),
                   ),
                 ],
               ),
             ),
-
-            Row(
-              children: [
-                ServiceCard(imagePath: 'images/ser01.png', serviceDescription: 'Taxation is a critical factor for every citizen and business. We provide advise in planning your personal tax and business tax to maximize the benefits', serviceTopic: 'Tax Advisory Service ',)
-              ],
+            SizedBox(height: 90,),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ServiceCard(
+                    imagePath: 'images/ser01.png',
+                    serviceDescription:
+                        'Taxation is a critical factor for every citizen and business. We provide advise in planning your personal tax and business tax to maximize the benefits',
+                    serviceTopic: 'Tax Advisory Service ',
+                  ),
+                  ServiceCard(
+                    imagePath: 'images/ser02.png',
+                    serviceDescription:
+                    'We offer efficient and effective services in calculating and filing tax returns of citizens and businesses in Sri Lanka and overseas',
+                    serviceTopic: 'Tax Return Service',
+                  ),
+                  ServiceCard(
+                    imagePath: 'images/ser03.png',
+                    serviceDescription:
+                    'As an expat employee, you need to pay taxes for the income you received from Sri Lanka and file the return of income',
+                    serviceTopic: 'Expat Tax Service ',
+                  ),
+                ],
+              ),
             ),
-            Text('Service Desktop'),
+            SizedBox(height: 90,),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ServiceCard(
+                    imagePath: 'images/ser04.png',
+                    serviceDescription:
+                    'Transfer pricing regulation in Sri Lanka is increasing and businesses with associated entities are required to file transfer pricing returns',
+                    serviceTopic: 'Transfer Pricing',
+                  ),
+                  ServiceCard(
+                    imagePath: 'images/ser05.png',
+                    serviceDescription:
+                    'Calculate your quarterly income tax for free with Taxperts, covering the fiscal year from April 1st to March 31st. Stay updated on how tax changes affect you, all in one place',
+                    serviceTopic: 'Tax Calculator',
+                  ),
+                  ServiceCard(
+                    imagePath: 'images/ser06.png',
+                    serviceDescription:
+                    'TIN registration assigns a unique identifier for tax purposes, essential for legal business operations and tax filings.',
+                    serviceTopic: 'TIN Registration',
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 90,),
+            Center(
+              child: Container(
+                width: 1040, // Adjust to the width of your design
+                height: 184, // Adjust to the height of your design
+
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Image.asset(
+                        'images/ContactHome.png', // Replace with your background image
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Positioned(
+                      left: 430, // Adjust the positioning as per your design
+                      bottom: 10,
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            // Handle button press
+                          },
+                          child: Text(
+                            'Contact Us',
+                            style: TextStyle(
+                              fontSize: 16, // Set your desired font size here
+                              // Optional: Set font weight
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary:
+                            AppColor.appOrange, // Button background color
+                            onPrimary: Colors.white, // Button text color
+                            shape: RoundedRectangleBorder(
+                              borderRadius:
+                              BorderRadius.circular(25), // Rounded button
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 32,
+                                vertical: 16), // Set your desired padding here
+                            minimumSize:
+                            Size(180, 48), // Set the button's size here
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            Footer(),
           ],
         ),
       ),
