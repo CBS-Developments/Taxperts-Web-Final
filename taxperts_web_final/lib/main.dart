@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'CalculatorPage/calculator.dart';
 import 'ContactPage/contact.dart';
 import 'FormPage/form.dart';
 import 'HomePage/home.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           // '/blog': (context) => BlogPage(),
           '/start': (context) => FormPage(),
           '/services': (context) => ServicePage(),
-          // '/tax-calculator': (context) => CalculatorPage(),
+          '/tax-calculator': (context) => CalculatorPage(),
           // '/Beneficiaries': (context) => BeneficiariesPage(),
           // '/createBeneficiaries': (context) => CreateBeneficiariesPage(),
           // '/Chat': (context) => ChatScreen(),
