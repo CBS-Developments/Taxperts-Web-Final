@@ -262,7 +262,7 @@ class _FormDesktopState extends State<FormDesktop> {
                   style: TextStyle(fontSize: 15),
                 ),
                 style: ElevatedButton.styleFrom(
-                  fixedSize: Size(120, 40), // Set the width and height
+                  fixedSize: Size(150, 40), // Set the width and height
                   primary:
                       AppColor.appOrange, // Set the background color to green
                   shape: RoundedRectangleBorder(
