@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
+import '../Components/footer.dart';
+import '../Components/form_register.dart';
 import '../Components/navBar.dart';
+import '../colors.dart';
 
 class REGFormDesktop extends StatefulWidget {
   const REGFormDesktop({super.key});
@@ -11,6 +15,12 @@ class REGFormDesktop extends StatefulWidget {
 
 class _REGFormDesktopState extends State<REGFormDesktop> {
   int _selectedIndex = 9;
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _messageController = TextEditingController();
+  final TextEditingController _mobileNumberController = TextEditingController();
+  final TextEditingController _whatsAppNumberController = TextEditingController();
+  String? _selectedTaxType;
 
   void _navigateTo(int index, String routeName) {
     setState(() {
@@ -57,8 +67,226 @@ class _REGFormDesktopState extends State<REGFormDesktop> {
               ],
             ),
           ),
-          Text("REGForm Desktop"),
-        ],
+          Padding(
+            padding: const EdgeInsets.only(top: 30.0),
+            child: Text(
+              'REQUEST A CALLBACK',
+              style: TextStyle(
+                color: AppColor.appTeal,
+                fontSize: 25,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          const Text(
+              'Our team is ready and available to provide you with the necessary information to get started.'),
+          const Text(
+              'Please fill out the form below, and we will get back to you promptly.'),
+          const SizedBox(height: 20.0),
+          Row(
+            children: [
+              Expanded(
+                child: CustomFormField(
+                  label: 'Purpose:  ',
+                  child: DropdownButtonFormField(
+                    value: _selectedTaxType,
+                    items: [
+                      'TIN Registration',
+                      'VAT/SSCL Registration',
+                      'VAT Registration ',
+                      'SSCL Registration',
+                      'Return Filling Registration',
+                    ].map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        _selectedTaxType = value;
+                      });
+                    },
+                    decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                      hintText: 'TIN Registration', // Alternatively, add here if it's more appropriate
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 20.0),
+              Expanded(
+                child: CustomFormField(
+                  label: 'Name: ',
+                  child: TextField(
+                    controller: _nameController,
+                    decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                      hintText: 'Enter Name',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20.0),
+          Row(
+            children: [
+              Expanded( // This Expanded widget is for the Email field, which we're not changing
+                flex: 2, // You can adjust the flex to control the size relative to the phone number fields if needed
+                child: CustomFormField(
+                  label: 'Email: ',
+                  child: TextField(
+                    controller: _emailController,
+                    decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                      hintText: 'Enter Email',
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 10.0), // Provides spacing between the email and phone number fields
+              Expanded( // Expanded widget for the Mobile Number field
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 65.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Row(
+                        children: [
+                          Text(
+                            'Mobile Number: ',
+                            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            ' *', // Space added before star for separation
+                            style: TextStyle(fontWeight: FontWeight.w500, color: Colors.red),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      InternationalPhoneNumberInput(
+                        onInputChanged: (PhoneNumber number) {},
+                        onInputValidated: (bool value) {},
+                        selectorConfig: const SelectorConfig(
+                          selectorType: PhoneInputSelectorType.DROPDOWN,
+                        ),
+                        ignoreBlank: false,
+                        autoValidateMode: AutovalidateMode.disabled,
+                        selectorTextStyle: TextStyle(color: Colors.black, fontSize: 12), // Adjusted font size
+                        textFieldController: _mobileNumberController,
+                        formatInput: false,
+                        keyboardType: TextInputType.numberWithOptions(signed: true, decimal: true),
+                        inputDecoration: InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                          ),
+                          hintText: 'Mobile Number',
+                        ),
+                        spaceBetweenSelectorAndTextField: 0,
+                      ),
+
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(width: 10.0),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 60.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'WhatsApp Number: ',
+                        style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(height: 8),
+                      InternationalPhoneNumberInput(
+                        onInputChanged: (PhoneNumber number) {},
+                        onInputValidated: (bool value) {},
+                        selectorConfig: const SelectorConfig(
+                          selectorType: PhoneInputSelectorType.DROPDOWN,
+                        ),
+                        ignoreBlank: false,
+                        autoValidateMode: AutovalidateMode.disabled,
+                        selectorTextStyle: const TextStyle(color: Colors.black, fontSize: 12), // Reduced font size
+                        textFieldController: _whatsAppNumberController,
+                        formatInput: false,
+                        keyboardType: const TextInputType.numberWithOptions(signed: true, decimal: true),
+                        inputDecoration: const InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0), // Adjust padding
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                          ),
+                          hintText: 'WhatsApp Number',
+                        ),
+                        spaceBetweenSelectorAndTextField: 0, // Reduce space if needed
+                        selectorButtonOnErrorPadding: 0, // Adjust padding around error icon if used
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 20.0),
+
+          Expanded(child: CustomFormField(
+            label: 'Message: ',
+            child: TextField(
+              controller: _messageController,
+              decoration: const InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black),
+                ),
+                hintText: 'Type here',
+              ),
+              keyboardType: TextInputType.multiline,
+              minLines: 3, // Adjust as necessary for the desired height
+              maxLines: 5,
+            ),
+          ),),
+          const SizedBox(height: 20.0),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {},
+              child: const Text(
+                'Submit',
+                style: TextStyle(fontSize: 15),
+              ),
+              style: ElevatedButton.styleFrom(
+                fixedSize: const Size(150, 40), // Set the width and height
+                primary:
+                AppColor.appOrange, // Set the background color to green
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(
+                      30), // Set the border radius
+                ),
+              ),
+            ),
+          ),
+                  ],
       ),
     );
   }
