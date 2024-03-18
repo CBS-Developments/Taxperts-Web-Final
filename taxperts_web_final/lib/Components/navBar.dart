@@ -1,95 +1,162 @@
 import 'package:flutter/material.dart';
 import 'package:taxperts_web_final/colors.dart';
 
-class CustomNavigationBar extends StatelessWidget {
+class CustomNavigationBar extends StatefulWidget {
   final int selectedIndex;
   final Function(int, String) onItemSelected;
 
-  CustomNavigationBar({
+  const CustomNavigationBar({
+    Key? key,
     required this.selectedIndex,
     required this.onItemSelected,
-  });
+  }) : super(key: key);
 
   @override
+  _CustomNavigationBarState createState() => _CustomNavigationBarState();
+}
 
+class _CustomNavigationBarState extends State<CustomNavigationBar> {
+  OverlayEntry? _overlayEntry;
+  final GlobalKey _mediaKey = GlobalKey();
+
+  @override
   Widget build(BuildContext context) {
-    // Define your colors, font sizes, and other styles.
     double screenWidth = MediaQuery.of(context).size.width;
+    double p15 = screenWidth / 120;
+    // Adjusted divider width calculation to use p15 for consistency
+    double p20 = screenWidth / 90;
     double p30 = screenWidth / 60;
     double p60 = screenWidth / 30;
-    double p15 = screenWidth / 120;
-    double p20 = screenWidth / 90;
 
     Color activeColor = AppColor.appTeal;
     Color inactiveColor = Colors.black;
-    Color startNowColor = AppColor.appOrange; // Color for "Start Now" text when inactive.
-    double fontSize = 16;
+    Color startNowColor = AppColor.appOrange;
+    double fontSize = 15;
     FontWeight fontWeight = FontWeight.w500;
 
-    // Define labels and routes.
-    List<String> labels = ['Home', 'Tax Calculator', 'Services', 'Resources', 'Blog', 'Contact'];
-    List<String> routes = ['/home', '/tax-calculator', '/services', '/resources', '/blog', '/contact'];
+    List<String> labels = ['Home', 'Tax Calculator', 'Services', 'Taxpert Academy', 'Media', 'Contact'];
+    List<String> routes = ['/home', '/tax-calculator', '/services', '/taxpert-academy', '', '/contact'];
 
-    // Build the navigation bar items except "Start Now".
     List<Widget> navItems = [];
     for (int i = 0; i < labels.length; i++) {
-      navItems.add(
-        InkWell(
-          onTap: () => onItemSelected(i, routes[i]),
+      Widget item;
+      if (labels[i] == 'Media') {
+        item = GestureDetector(
+          onTap: () {
+            if (_overlayEntry == null) {
+              _showPopupMenu();
+            } else {
+              _removePopupMenu();
+            }
+          },
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: p15),
+            child: Text(
+              'Media',
+              style: TextStyle(
+                fontSize: fontSize,
+                color: inactiveColor,
+                fontWeight: fontWeight,
+              ),
+              key: _mediaKey,
+            ),
+          ),
+        );
+      } else {
+        item = InkWell(
+          onTap: () => widget.onItemSelected(i, routes[i]),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: p15),
             child: Text(
               labels[i],
               style: TextStyle(
                 fontSize: fontSize,
-                color: selectedIndex == i ? activeColor : inactiveColor,
+                color: widget.selectedIndex == i ? activeColor : inactiveColor,
                 fontWeight: fontWeight,
               ),
             ),
           ),
-        ),
-      );
-
-      // Add vertical dividers with specified height except after the last item
+        );
+      }
+      navItems.add(item);
+      // Only add VerticalDivider if the item is not the last in the list
       if (i < labels.length - 1) {
         navItems.add(
-          Container(
-            height: 15, // Set the vertical divider height to 20
-            child: VerticalDivider(color: AppColor.appDarkGrey, thickness: 1,width: p20,),
-          ),
+          Container(height: 15, child: VerticalDivider(color: AppColor.appDarkGrey, thickness: 1, width: p15)),
         );
       }
     }
 
-    // Add the "Start Now" button separately.
     Widget startNowButton = TextButton(
-      onPressed: () => onItemSelected(labels.length, '/start'),
-      style: TextButton.styleFrom(
-        // foregroundColor: selectedIndex == labels.length ? activeColor : Colors.white,
-        // backgroundColor: selectedIndex == labels.length ? Colors.white : Colors.white,
-      ),
+      onPressed: () => widget.onItemSelected(labels.length, '/start'),
       child: Text(
         'Start Now',
         style: TextStyle(
           fontSize: fontSize,
           fontWeight: fontWeight,
-          color: selectedIndex == labels.length ? activeColor : startNowColor,
+          color: widget.selectedIndex == labels.length ? activeColor : startNowColor,
         ),
       ),
     );
 
-    // Return a row with all navigation items and the "Start Now" button.
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        ...navItems,
-        // dividerBeforeStartNow,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          ...navItems,
+          Padding(
+            padding: EdgeInsets.only(left: p60, right: p30),
+            child: startNowButton,
+          ),
+        ],
+      ),
+    );
+  }
 
-        Padding(
-          padding:  EdgeInsets.only(left: p60, right: p30),
-          child: startNowButton,
+  void _showPopupMenu() {
+    _overlayEntry = _createOverlayEntry();
+    Overlay.of(context)?.insert(_overlayEntry!);
+  }
+
+  void _removePopupMenu() {
+    _overlayEntry?.remove();
+    _overlayEntry = null;
+  }
+
+  OverlayEntry _createOverlayEntry() {
+    final RenderBox renderBox = _mediaKey.currentContext!.findRenderObject() as RenderBox;
+    final size = renderBox.size;
+    final offset = renderBox.localToGlobal(Offset.zero);
+
+    return OverlayEntry(
+      builder: (context) => Positioned(
+        left: offset.dx,
+        top: offset.dy + size.height,
+        width: 85, // Adjusted for specific width
+        child: Material(
+          elevation: 4.0,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              ListTile(
+                title: Text('Blog'),
+                onTap: () {
+                  _removePopupMenu();
+                  widget.onItemSelected(-1, '/blog');
+                },
+              ),
+              ListTile(
+                title: Text('Vlog'),
+                onTap: () {
+                  _removePopupMenu();
+                  widget.onItemSelected(-1, '/vlog');
+                },
+              ),
+            ],
+          ),
         ),
-      ],
+      ),
     );
   }
 }
