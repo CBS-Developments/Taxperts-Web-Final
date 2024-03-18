@@ -4,6 +4,7 @@ import 'package:taxperts_web_final/Components/footer.dart';
 import 'package:taxperts_web_final/colors.dart';
 import 'package:intl/intl.dart';
 import '../Components/calclulator_components.dart';
+import '../Components/form_register.dart';
 import '../Components/navBar.dart';
 import '../sizes.dart';
 
@@ -17,7 +18,9 @@ class CalculatorDesktop extends StatefulWidget {
 class _CalculatorDesktopState extends State<CalculatorDesktop> {
   int _selectedIndex = 1;
   int _visibleContainerIndex = 1;
-
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   void _navigateTo(int index, String routeName) {
     setState(() {
       _selectedIndex = index;
@@ -1519,8 +1522,87 @@ class _CalculatorDesktopState extends State<CalculatorDesktop> {
                         Visibility(
                           visible: _visibleContainerIndex == 4,
                           child: Container(
-                              color: Colors.purple,
-                              child: Center(child: Text('Container 4'))),
+                              color: Colors.white,
+                              child: Center(child: SizedBox(
+                                width: 600,
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 20,),
+                                    CustomFormField(
+                                      label: 'Name: ',
+                                      child: TextField(
+                                        controller: _nameController,
+                                        decoration: InputDecoration(
+                                          filled: true,
+                                          hintText: 'Enter Name',
+                                          fillColor: Colors.white,
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    
+                                    SizedBox(height: 20,),
+
+                                    CustomFormField(
+                                      label: 'Email: ',
+                                      child: TextField(
+                                        controller: _nameController,
+                                        decoration: InputDecoration(
+                                          filled: true,
+                                          hintText: 'Enter Email',
+                                          fillColor: Colors.white,
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 20,),
+
+                                    CustomFormField(
+                                      label: 'WhatsApp Number: ',
+                                      child: TextField(
+                                        controller: _nameController,
+                                        decoration: InputDecoration(
+                                          filled: true,
+                                          hintText: 'Enter WhatsApp Number',
+                                          fillColor: Colors.white,
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    
+                                    SizedBox(height: 40,),
+                                    ElevatedButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          _visibleContainerIndex = 1;
+                                        });
+                                        // Handle button tap
+                                      },
+                                      child: Text(
+                                        'Submit',
+                                        style: TextStyle(fontSize: 14),
+                                      ),
+                                      style: ElevatedButton.styleFrom(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 32, vertical: 10),
+                                        // fixedSize: const Size(
+                                        //     220, 45), // Set the width and height
+                                        primary: AppColor.appOrange, // Set the background color to green
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                              30), // Set the border radius
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ))),
                         ),
                       ],
                     ),
