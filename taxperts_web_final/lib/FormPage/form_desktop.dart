@@ -279,9 +279,7 @@ class _FormDesktopState extends State<FormDesktop> {
                           children: [
                             Text(
                               'Do you have Taxpayer Identification Number (TIN)?',
-                              style: TextStyle(
-                                fontSize: 15.0,
-                              ),
+                              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                               textAlign: TextAlign.left,
                             ),
                             Text(
