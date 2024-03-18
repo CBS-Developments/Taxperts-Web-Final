@@ -234,20 +234,23 @@ class _FormDesktopState extends State<FormDesktop> {
                 ),
                 Expanded(
                   flex: 2,
-                  child: CustomFormField(
-                    label: 'Message: ',
-                    child: TextField(
-                      controller: _messageController,
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: CustomFormField(
+                      label: 'Message: ',
+                      child: TextField(
+                        controller: _messageController,
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                          ),
                         ),
+                        keyboardType: TextInputType.multiline,
+                        minLines: 3, // Adjust as necessary for the desired height
+                        maxLines: 5,
                       ),
-                      keyboardType: TextInputType.multiline,
-                      minLines: 3, // Adjust as necessary for the desired height
-                      maxLines: 5,
                     ),
                   ),
                 ),
