@@ -39,6 +39,7 @@ dependencies:
   flip_card: ^0.7.0
   pattern_formatter: ^3.0.0
   fluttertoast: ^8.2.4
+  intl_phone_number_input: ^0.7.0+2
 
 dev_dependencies:
   flutter_test:

@@ -4,6 +4,7 @@ import 'package:taxperts_web_final/colors.dart';
 
 import '../Components/form_register.dart';
 import '../Components/navBar.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
 class FormDesktop extends StatefulWidget {
   const FormDesktop({super.key});
@@ -14,9 +15,11 @@ class FormDesktop extends StatefulWidget {
 
 class _FormDesktopState extends State<FormDesktop> {
   final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _messageController = TextEditingController();
+  final TextEditingController _mobileNumberController = TextEditingController();
+  final TextEditingController _whatsAppNumberController = TextEditingController();
+
   int _selectedIndex = 6;
   String? _selectedTaxType;
   String? _hasTIN;
@@ -44,7 +47,7 @@ class _FormDesktopState extends State<FormDesktop> {
                         .withOpacity(0.1), // Shadow color with some transparency
                     spreadRadius: 0, // Spread radius
                     blurRadius: 4, // Blur radius
-                    offset: Offset(0, 2), // changes position of shadow
+                    offset: const Offset(0, 2), // changes position of shadow
                   ),
                 ],
                 // If you also want to round the corners of the container
@@ -78,11 +81,11 @@ class _FormDesktopState extends State<FormDesktop> {
                 ),
               ),
             ),
-            Text(
+            const Text(
                 'Our team is ready and available to provide you with the necessary information to get started.'),
-            Text(
+            const Text(
                 'Please fill out the form below, and we will get back to you promptly.'),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Row(
               children: [
                 Expanded(
@@ -119,71 +122,149 @@ class _FormDesktopState extends State<FormDesktop> {
                           _selectedTaxType = value;
                         });
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black),
                         ),
+                        hintText: 'Individual Income Tax (IIT)', // Alternatively, add here if it's more appropriate
                       ),
                     ),
                   ),
                 ),
-                SizedBox(width: 20.0),
+                const SizedBox(width: 20.0),
                 Expanded(
                   child: CustomFormField(
                     label: 'Name: ',
                     child: TextField(
                       controller: _nameController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black),
                         ),
+                        hintText: 'Enter Name',
                       ),
                     ),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Row(
               children: [
-                Expanded(
+                Expanded( // This Expanded widget is for the Email field, which we're not changing
+                  flex: 2, // You can adjust the flex to control the size relative to the phone number fields if needed
                   child: CustomFormField(
                     label: 'Email: ',
                     child: TextField(
                       controller: _emailController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black),
                         ),
+                        hintText: 'Enter Email',
                       ),
                     ),
                   ),
                 ),
-                SizedBox(width: 20.0),
-                Expanded(
-                  child: CustomFormField(
-                    label: 'Phone Number: ',
-                    child: TextField(
-                      controller: _phoneController,
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                const SizedBox(width: 10.0), // Provides spacing between the email and phone number fields
+                Expanded( // Expanded widget for the Mobile Number field
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 65.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Row(
+                          children: [
+                            Text(
+                              'Mobile Number: ',
+                              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                            ),
+                            Text(
+                              ' *', // Space added before star for separation
+                              style: TextStyle(fontWeight: FontWeight.w500, color: Colors.red),
+                            ),
+                          ],
                         ),
-                      ),
+                        const SizedBox(height: 8),
+                        InternationalPhoneNumberInput(
+                          onInputChanged: (PhoneNumber number) {},
+                          onInputValidated: (bool value) {},
+                          selectorConfig: const SelectorConfig(
+                            selectorType: PhoneInputSelectorType.DROPDOWN,
+                          ),
+                          ignoreBlank: false,
+                          autoValidateMode: AutovalidateMode.disabled,
+                          selectorTextStyle: TextStyle(color: Colors.black, fontSize: 12), // Adjusted font size
+                          textFieldController: _mobileNumberController,
+                          formatInput: false,
+                          keyboardType: TextInputType.numberWithOptions(signed: true, decimal: true),
+                          inputDecoration: InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black),
+                            ),
+                            hintText: 'Mobile Number',
+                          ),
+                          spaceBetweenSelectorAndTextField: 0,
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10.0),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 60.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'WhatsApp Number: ',
+                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                        ),
+                        const SizedBox(height: 8),
+                        InternationalPhoneNumberInput(
+                          onInputChanged: (PhoneNumber number) {},
+                          onInputValidated: (bool value) {},
+                          selectorConfig: const SelectorConfig(
+                            selectorType: PhoneInputSelectorType.DROPDOWN,
+                          ),
+                          ignoreBlank: false,
+                          autoValidateMode: AutovalidateMode.disabled,
+                          selectorTextStyle: const TextStyle(color: Colors.black, fontSize: 12), // Reduced font size
+                          textFieldController: _whatsAppNumberController,
+                          formatInput: false,
+                          keyboardType: const TextInputType.numberWithOptions(signed: true, decimal: true),
+                          inputDecoration: const InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0), // Adjust padding
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black),
+                            ),
+                            hintText: 'WhatsApp Number',
+                          ),
+                          spaceBetweenSelectorAndTextField: 0, // Reduce space if needed
+                          selectorButtonOnErrorPadding: 0, // Adjust padding around error icon if used
+                        ),
+
+                      ],
                     ),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 20.0),
+
+            const SizedBox(height: 20.0),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -192,14 +273,22 @@ class _FormDesktopState extends State<FormDesktop> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 60.0),
-                        child: Text(
-                          'Do you have Taxpayer Identification Number (TIN)?',
-                          style: TextStyle(
-                            fontSize: 15.0,
-                          ),
-                          textAlign: TextAlign.left,
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 60.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Do you have Taxpayer Identification Number (TIN)?',
+                              style: TextStyle(
+                                fontSize: 15.0,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                            Text(
+                              ' *', // Space added before star for separation
+                              style: TextStyle(fontWeight: FontWeight.w500, color: Colors.red),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
@@ -215,7 +304,7 @@ class _FormDesktopState extends State<FormDesktop> {
                                 });
                               },
                             ),
-                            Text('Yes'),
+                            const Text('Yes'),
                             Radio(
                               value: 'No',
                               groupValue: _hasTIN,
@@ -225,7 +314,7 @@ class _FormDesktopState extends State<FormDesktop> {
                                 });
                               },
                             ),
-                            Text('No'),
+                            const Text('No'),
                           ],
                         ),
                       ),
@@ -240,12 +329,13 @@ class _FormDesktopState extends State<FormDesktop> {
                       label: 'Message: ',
                       child: TextField(
                         controller: _messageController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
                           ),
+                          hintText: 'Type here',
                         ),
                         keyboardType: TextInputType.multiline,
                         minLines: 3, // Adjust as necessary for the desired height
@@ -256,16 +346,16 @@ class _FormDesktopState extends State<FormDesktop> {
                 ),
               ],
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Center(
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   'Submit',
                   style: TextStyle(fontSize: 15),
                 ),
                 style: ElevatedButton.styleFrom(
-                  fixedSize: Size(150, 40), // Set the width and height
+                  fixedSize: const Size(150, 40), // Set the width and height
                   primary:
                       AppColor.appOrange, // Set the background color to green
                   shape: RoundedRectangleBorder(
@@ -276,9 +366,9 @@ class _FormDesktopState extends State<FormDesktop> {
               ),
             ),
 
-            SizedBox(height: 90.0),
+            const SizedBox(height: 90.0),
 
-            Footer()
+            const Footer()
           ],
         ),
       ),
