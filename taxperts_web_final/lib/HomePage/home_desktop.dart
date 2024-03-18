@@ -1,5 +1,6 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:taxperts_web_final/REGForm/REGForm.dart';
 import 'package:taxperts_web_final/colors.dart';
 import 'package:taxperts_web_final/sizes.dart';
 
@@ -264,172 +265,274 @@ class _HomeDesktopState extends State<HomeDesktop> {
             SizedBox(
               height: 80,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: p60),
-                  child: Column(
-                    children: [
-                      Text(
-                        'TIN REGISTRATION',
-                        style: TextStyle(
-                            fontSize: 22,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600),
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 15.0, vertical: 10),
-                            child: ElevatedButton(
-                              onPressed: () {
-                                // Handle button tap
-                              },
-                              child: Text(
-                                'Contact Us',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 30, vertical: 15),
-                                // fixedSize: const Size(
-                                //     220, 45), // Set the width and height
-                                primary: AppColor
-                                    .appOrange, // Set the background color to green
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      30), // Set the border radius
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 15.0, vertical: 10),
-                            child: ElevatedButton(
-                              onPressed: () {
-                                // Handle button tap
-                              },
-                              child: Row(
-                                children: [
-                                  Text(
-                                    'Read More',
-                                    style: TextStyle(fontSize: 14),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 1.0, left: 2),
-                                    child: Icon(
-                                      Icons.keyboard_double_arrow_right_rounded,
-                                      color: Colors.white, // Icon color green
-                                      size: 20,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p30 + p15),
+                    child: Column(
+                      children: [
+                        Text(
+                          'TIN REGISTRATION',
+                          style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 10),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  // Handle button tap
+                                },
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      'Read More',
+                                      style: TextStyle(fontSize: 14),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 30, vertical: 15),
-                                // fixedSize: const Size(
-                                //     220, 45), // Set the width and height
-                                primary: AppColor
-                                    .appOrange, // Set the background color to green
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      30), // Set the border radius
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: p60),
-                  child: Column(
-                    children: [
-                      Text(
-                        'VAT REGISTRATION',
-                        style: TextStyle(
-                            fontSize: 22,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600),
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 15.0, vertical: 10),
-                            child: ElevatedButton(
-                              onPressed: () {
-                                // Handle button tap
-                              },
-                              child: Text(
-                                'Contact Us',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 30, vertical: 15),
-                                // fixedSize: const Size(
-                                //     220, 45), // Set the width and height
-                                primary: AppColor
-                                    .appOrange, // Set the background color to green
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      30), // Set the border radius
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 15.0, vertical: 10),
-                            child: ElevatedButton(
-                              onPressed: () {
-                                // Handle button tap
-                              },
-                              child: Row(
-                                children: [
-                                  Text(
-                                    'Read More',
-                                    style: TextStyle(fontSize: 14),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 1.0, left: 2),
-                                    child: Icon(
-                                      Icons.keyboard_double_arrow_right_rounded,
-                                      color: Colors.white, // Icon color green
-                                      size: 20,
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 1.0, left: 2),
+                                      child: Icon(
+                                        Icons
+                                            .keyboard_double_arrow_right_rounded,
+                                        color: Colors.white, // Icon color green
+                                        size: 20,
+                                      ),
                                     ),
+                                  ],
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 30, vertical: 15),
+                                  // fixedSize: const Size(
+                                  //     220, 45), // Set the width and height
+                                  primary: AppColor
+                                      .appOrange, // Set the background color to green
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        30), // Set the border radius
                                   ),
-                                ],
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 30, vertical: 15),
-                                // fixedSize: const Size(
-                                //     220, 45), // Set the width and height
-                                primary: AppColor
-                                    .appOrange, // Set the background color to green
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      30), // Set the border radius
                                 ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 10),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => REGForm()),
+                                  );
+                                  // Handle button tap
+                                },
+                                child: Text(
+                                  'Register Me',
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 30, vertical: 15),
+                                  // fixedSize: const Size(
+                                  //     220, 45), // Set the width and height
+                                  primary: AppColor
+                                      .appOrange, // Set the background color to green
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        30), // Set the border radius
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p30 + p15),
+                    child: Column(
+                      children: [
+                        Text(
+                          'VAT/SSCL REGISTRATION',
+                          style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 10),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  // Handle button tap
+                                },
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      'Read More',
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 1.0, left: 2),
+                                      child: Icon(
+                                        Icons
+                                            .keyboard_double_arrow_right_rounded,
+                                        color: Colors.white, // Icon color green
+                                        size: 20,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 30, vertical: 15),
+                                  // fixedSize: const Size(
+                                  //     220, 45), // Set the width and height
+                                  primary: AppColor
+                                      .appOrange, // Set the background color to green
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        30), // Set the border radius
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 10),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => REGForm()),
+                                  );
+                                  // Handle button tap
+                                },
+                                child: Text(
+                                  'Register Me',
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 30, vertical: 15),
+                                  // fixedSize: const Size(
+                                  //     220, 45), // Set the width and height
+                                  primary: AppColor
+                                      .appOrange, // Set the background color to green
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        30), // Set the border radius
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p30 + p15),
+                    child: Column(
+                      children: [
+                        Text(
+                          'RETURN FILLING',
+                          style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 10),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  // Handle button tap
+                                },
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      'Read More',
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 1.0, left: 2),
+                                      child: Icon(
+                                        Icons
+                                            .keyboard_double_arrow_right_rounded,
+                                        color: Colors.white, // Icon color green
+                                        size: 20,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 30, vertical: 15),
+                                  // fixedSize: const Size(
+                                  //     220, 45), // Set the width and height
+                                  primary: AppColor
+                                      .appOrange, // Set the background color to green
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        30), // Set the border radius
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 10),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => REGForm()),
+                                  );
+                                  // Handle button tap
+                                },
+                                child: Text(
+                                  'Register Me',
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 30, vertical: 15),
+                                  // fixedSize: const Size(
+                                  //     220, 45), // Set the width and height
+                                  primary: AppColor
+                                      .appOrange, // Set the background color to green
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        30), // Set the border radius
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 60,
@@ -545,7 +648,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   fontSize: 24),
                             ),
                           ),
-
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Text(
@@ -614,7 +716,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   fontSize: 24),
                             ),
                           ),
-
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Text(
@@ -625,7 +726,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   fontSize: 20),
                             ),
                           ),
-
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Text(
@@ -658,14 +758,13 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   fontSize: 24),
                             ),
                           ),
-
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Text(
                               'A Revolution in Tax Compliance Business Process Management',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color:AppColor.appTeal,
+                                  color: AppColor.appTeal,
                                   fontSize: 24),
                             ),
                           ),
@@ -700,7 +799,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
               height: 40,
             ),
             Padding(
-              padding:  EdgeInsets.symmetric(horizontal: p120),
+              padding: EdgeInsets.symmetric(horizontal: p120),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -716,7 +815,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           fontWeight: FontWeight.w600),
                     ),
                   ),
-
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 15.0,
@@ -729,8 +827,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           fontWeight: FontWeight.w600),
                     ),
                   ),
-
-
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 15.0,
@@ -739,15 +835,14 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       'Embark on a journey to stress-free tax compliance with Taxperts, where our dedication to precision and your peace of mind comes first. Ready to change the way you think about taxes? Discover the Taxperts difference today',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.black,),
+                        color: Colors.black,
+                      ),
                       textAlign: TextAlign.left,
                     ),
                   ),
                 ],
               ),
             ),
-
-
             SizedBox(
               height: 40,
             ),
