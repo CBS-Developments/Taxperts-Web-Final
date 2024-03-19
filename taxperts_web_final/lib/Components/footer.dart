@@ -196,7 +196,7 @@ class Footer extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: SelectableText(
-                            ' \n077 7 145 347\n011 2 424 922',
+                            ' \n+94 77 7 145 347\n+94 11 2 424 922',
                             style: TextStyle(fontSize: 16, color: Colors.white),
                           ),
                         ),
@@ -217,7 +217,7 @@ class Footer extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: SelectableText(
-                            'No. 101, Olcott Mawatha, Colombo 11',
+                            '\nTaxperts Lanka Pvt. Ltd\nNo. 101, Olcott Mawatha, Colombo 11',
                             style: TextStyle(fontSize: 16, color: Colors.white),
                           ),
                         ),
