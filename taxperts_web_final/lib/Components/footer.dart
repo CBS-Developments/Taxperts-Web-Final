@@ -127,7 +127,7 @@ class Footer extends StatelessWidget {
                     TextButton(
                         onPressed: () {},
                         child: Text(
-                          'Contact',
+                          'Vlog',
                           style: TextStyle(
                               fontSize: fontSize,
                               color: Colors.white,
@@ -144,7 +144,7 @@ class Footer extends StatelessWidget {
                     TextButton(
                         onPressed: () {},
                         child: Text(
-                          'FAQs',
+                          'Contact',
                           style: TextStyle(
                               fontSize: fontSize,
                               color: Colors.white,
