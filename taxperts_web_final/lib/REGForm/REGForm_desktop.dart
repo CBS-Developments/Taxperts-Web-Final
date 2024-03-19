@@ -7,7 +7,8 @@ import '../Components/navBar.dart';
 import '../colors.dart';
 
 class REGFormDesktop extends StatefulWidget {
-  const REGFormDesktop({super.key});
+  final String? initialTaxType;
+  const REGFormDesktop({super.key, this.initialTaxType});
 
   @override
   State<REGFormDesktop> createState() => _REGFormDesktopState();
@@ -22,6 +23,12 @@ class _REGFormDesktopState extends State<REGFormDesktop> {
   final TextEditingController _whatsAppNumberController =
       TextEditingController();
   String? _selectedTaxType;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedTaxType = widget.initialTaxType;
+  }
 
   void _navigateTo(int index, String routeName) {
     setState(() {

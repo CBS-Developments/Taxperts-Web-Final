@@ -8,6 +8,7 @@ import '../Components/blogCard.dart';
 import '../Components/footer.dart';
 import '../Components/navBar.dart';
 import '../Components/service_page_card.dart';
+import '../REGForm/REGForm_desktop.dart';
 
 class HomeDesktop extends StatefulWidget {
   const HomeDesktop({super.key});
@@ -330,7 +331,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => REGForm()),
+                                      builder: (context) => REGFormDesktop(initialTaxType: 'TIN Registration'),
+                                    ),
                                   );
                                   // Handle button tap
                                 },
@@ -417,7 +419,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => REGForm()),
+                                      builder: (context) => REGFormDesktop(initialTaxType: 'VAT/SSCL Registration'),),
                                   );
                                   // Handle button tap
                                 },
@@ -504,7 +506,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => REGForm()),
+                                      builder: (context) => REGFormDesktop(initialTaxType: 'Return Filling Registration'),),
                                   );
                                   // Handle button tap
                                 },
