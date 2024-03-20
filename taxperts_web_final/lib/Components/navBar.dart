@@ -34,8 +34,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
     double fontSize = 15;
     FontWeight fontWeight = FontWeight.w500;
 
-    List<String> labels = ['Home', 'Tax Calculator', 'Services', 'Taxpert Academy', 'Media', 'Contact'];
-    List<String> routes = ['/home', '/tax-calculator', '/services', '/taxpert-academy', '', '/contact'];
+    List<String> labels = ['Home', 'Tax Calculator', 'Services', 'Resources', 'Media', 'Contact'];
+    List<String> routes = ['/home', '/tax-calculator', '/services', '/resources', '', '/contact'];
 
     List<Widget> navItems = [];
     for (int i = 0; i < labels.length; i++) {

@@ -45,7 +45,7 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                         0.1), // Shadow color with some transparency
                     spreadRadius: 0, // Spread radius
                     blurRadius: 4, // Blur radius
-                    offset: Offset(0, 2), // changes position of shadow
+                    offset: const Offset(0, 2), // changes position of shadow
                   ),
                 ],
                 // If you also want to round the corners of the container
@@ -96,8 +96,8 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                             fontWeight: FontWeight.w800,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 10.0),
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 10.0),
                           child: Text(
                             '''Get Your Taxes Done Right with Taxperts''',
                             style: TextStyle(
@@ -106,8 +106,8 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                                 fontWeight: FontWeight.w600),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 2.0),
                           child: Text(
                             '''Embark on a journey to stress-free tax compliance with Taxperts, \nwhere our dedication to precision and your peace of mind comes first. \nReady to change the way you think about taxes? \nDiscover the Taxperts difference today.''',
                             style: TextStyle(
@@ -124,8 +124,8 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                 ],
               ),
             ),
-            SizedBox(height: 90,),
-            SingleChildScrollView(
+            const SizedBox(height: 90,),
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
@@ -150,8 +150,8 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                 ],
               ),
             ),
-            SizedBox(height: 90,),
-            SingleChildScrollView(
+            const SizedBox(height: 90,),
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
@@ -176,7 +176,7 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                 ],
               ),
             ),
-            SizedBox(height: 90,),
+            const SizedBox(height: 90,),
             Center(
               child: Container(
                 width: 1040, // Adjust to the width of your design
@@ -199,13 +199,6 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                           onPressed: () {
                             // Handle button press
                           },
-                          child: Text(
-                            'Contact Us',
-                            style: TextStyle(
-                              fontSize: 16, // Set your desired font size here
-                              // Optional: Set font weight
-                            ),
-                          ),
                           style: ElevatedButton.styleFrom(
                             primary:
                             AppColor.appOrange, // Button background color
@@ -214,11 +207,18 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                               borderRadius:
                               BorderRadius.circular(25), // Rounded button
                             ),
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 32,
                                 vertical: 16), // Set your desired padding here
                             minimumSize:
-                            Size(180, 48), // Set the button's size here
+                            const Size(180, 48), // Set the button's size here
+                          ),
+                          child: const Text(
+                            'Contact Us',
+                            style: TextStyle(
+                              fontSize: 16, // Set your desired font size here
+                              // Optional: Set font weight
+                            ),
                           ),
                         ),
                       ),
@@ -227,10 +227,10 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
-            Footer(),
+            const Footer(),
           ],
         ),
       ),
