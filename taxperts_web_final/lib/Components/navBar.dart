@@ -55,7 +55,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               'Media',
               style: TextStyle(
                 fontSize: fontSize,
-                color: inactiveColor,
+                color: widget.selectedIndex == i ? activeColor : inactiveColor,
                 fontWeight: fontWeight,
               ),
               key: _mediaKey,
