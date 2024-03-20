@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:taxperts_web_final/VlogPage/vlog.dart';
 
 import 'BlogPage/blog.dart';
 import 'CalculatorPage/calculator.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
           '/contact': (context) => ContactPage(),
           // '/home': (context) => HomePage(),
           '/blog': (context) => BlogPage(),
+          '/vlog': (context) => VlogPage(),
           '/start': (context) => FormPage(),
           '/services': (context) => ServicePage(),
           '/tax-calculator': (context) => CalculatorPage(),
