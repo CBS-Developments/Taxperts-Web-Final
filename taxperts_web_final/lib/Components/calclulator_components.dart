@@ -129,7 +129,7 @@ class RedioContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      width: 100, // Ensure secTextWidth is defined or provided.
+      width: 140, // Ensure secTextWidth is defined or provided.
       height: 40, // Ensure secTextHeight is defined or provided.
       child: Row(
         children: [
