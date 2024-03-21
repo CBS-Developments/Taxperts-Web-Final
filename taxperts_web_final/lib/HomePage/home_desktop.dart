@@ -132,21 +132,13 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
+                        const Row(
                           children: [
-                            const Text(
-                              'BEGIN YOUR JOURNEY TODAY WITH',
+                            Text(
+                              'BEGIN YOUR JOURNEY TODAY WITH TAXPERTS',
                               style: TextStyle(
                                 fontSize: 30,
                                 color: Colors.black,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            Text(
-                              ' TAXPERTS',
-                              style: TextStyle(
-                                fontSize: 30,
-                                color: AppColor.appTeal,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -1023,8 +1015,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 33, right: 20,bottom: 2), // Align with the text above
+                            const Padding(
+                              padding: EdgeInsets.only(left: 33, right: 20,bottom: 2), // Align with the text above
                               child: Text(
                                 'We respect your time, ensuring every deadline is met with room to spare',
                                 style: TextStyle(fontSize: 14, color: Colors.black),
@@ -1051,8 +1043,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
+                            const Padding(
+                              padding: EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
                               child: Text(
                                 'Your financial data is safeguarded with the highest level of security',
                                 style: TextStyle(fontSize: 14, color: Colors.black),
@@ -1079,8 +1071,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
+                            const Padding(
+                              padding: EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
                               child: Text(
                                 "Benefit from our experts' unmatched accuracy, for a worry-free filing experience",
                                 style: TextStyle(fontSize: 14, color: Colors.black),
@@ -1107,8 +1099,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
+                            const Padding(
+                              padding: EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
                               child: Text(
                                 'Join the ranks of our satisfied clients who enjoy a flawless filing record',
                                 style: TextStyle(fontSize: 14, color: Colors.black),
@@ -1135,8 +1127,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
+                            const Padding(
+                              padding: EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
                               child: Text(
                                 'Our friendly team is dedicated to making your tax filing experience smooth and stress-free',
                                 style: TextStyle(fontSize: 14, color: Colors.black),

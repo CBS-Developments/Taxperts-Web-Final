@@ -75,3 +75,79 @@ class ServicePageCard extends StatelessWidget {
     );
   }
 }
+
+
+class ServicePageCardTab extends StatelessWidget {
+  final String title;
+  final String description;
+  final double spaceHeight;
+
+
+  const ServicePageCardTab({
+    Key? key,
+    required this.title,
+    required this.description,
+    required this.spaceHeight,
+
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 20.0,
+      shadowColor: Colors.black, // You can customize the shadow color
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30.0), // Set the border radius here
+        side: BorderSide(
+          color: AppColor.appLightBlue, // Set the border color here
+          width: 1.0, // Set the border width here
+        ),
+      ),
+      child: Container(
+        width: 300,
+        height: 240,
+        padding: EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(height: 10),
+            Text(
+              title,
+              style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 24,
+                  color: AppColor.appTeal
+              ),
+            ),
+            SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
+                description,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 13,
+                ),
+              ),
+            ),
+
+            SizedBox(height: spaceHeight),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    // Handle Learn More tap
+                  },
+                  child: Text('Learn More >>',style: TextStyle(color: AppColor.appOrange),),
+                ),
+              ],
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
