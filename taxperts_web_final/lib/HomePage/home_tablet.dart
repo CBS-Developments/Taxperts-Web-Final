@@ -16,7 +16,6 @@ class HomeTab extends StatefulWidget {
 
 class _HomeTabState extends State<HomeTab> {
   Map<int, bool> hoverStates = {};
-  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
