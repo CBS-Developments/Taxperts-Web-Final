@@ -971,7 +971,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ),
                 child: Container(
                   width: 1040,
-                  height: 504,
+                  height: 570,
                   child: Row(
                     children: [
                       Image.asset('images/whych.png', height: 500),
@@ -980,7 +980,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       ),
                       SizedBox(
                         width: 500,
-                        height: 504,
+                        height: 570,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -1009,7 +1009,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                               children: [
                                 Container(
                                   width: 3,
-                                  height: 21,
+                                  height: 25,
                                   color: AppColor.appOrange,
                                   margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
@@ -1023,20 +1023,27 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 10,
+                            Padding(
+                              padding: const EdgeInsets.only(left: 33, right: 20,bottom: 2), // Align with the text above
+                              child: Text(
+                                'We respect your time, ensuring every deadline is met with room to spare',
+                                style: TextStyle(fontSize: 14, color: Colors.black),
+                              ),
                             ),
+                            // const SizedBox(
+                            //   height: 10,
+                            // ),
                             Row(
                               children: [
                                 Container(
                                   width: 3,
-                                  height: 21,
+                                  height: 25,
                                   color: AppColor.appOrange,
                                   margin: const EdgeInsets.only(
-                                      left: 10, right: 20, top: 10, bottom: 10),
+                                      left: 10, right: 20, top: 10,),
                                 ),
                                 const Text(
-                                  'Highly Confidential',
+                                  'Utmost Confidentiality',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
                                       fontSize: 18,
@@ -1044,20 +1051,27 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            const SizedBox(
-                              height: 10,
+                            Padding(
+                              padding: const EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
+                              child: Text(
+                                'Your financial data is safeguarded with the highest level of security',
+                                style: TextStyle(fontSize: 14, color: Colors.black),
+                              ),
                             ),
+                            // const SizedBox(
+                            //   height: 10,
+                            // ),
                             Row(
                               children: [
                                 Container(
                                   width: 3,
-                                  height: 21,
+                                  height: 25,
                                   color: AppColor.appOrange,
                                   margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
                                 ),
                                 const Text(
-                                  'Accurate Tax Filling',
+                                  'Precision in Tax Filing',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
                                       fontSize: 18,
@@ -1065,20 +1079,27 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            const SizedBox(
-                              height: 10,
+                            Padding(
+                              padding: const EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
+                              child: Text(
+                                "Benefit from our experts' unmatched accuracy, for a worry-free filing experience",
+                                style: TextStyle(fontSize: 14, color: Colors.black),
+                              ),
                             ),
+                            // const SizedBox(
+                            //   height: 10,
+                            // ),
                             Row(
                               children: [
                                 Container(
                                   width: 3,
-                                  height: 21,
+                                  height: 25,
                                   color: AppColor.appOrange,
                                   margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
                                 ),
                                 const Text(
-                                  'Avoid Tax Filling Penaltiesg',
+                                  'Penalty-Free Filing',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
                                       fontSize: 18,
@@ -1086,20 +1107,27 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            const SizedBox(
-                              height: 10,
+                            Padding(
+                              padding: const EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
+                              child: Text(
+                                'Join the ranks of our satisfied clients who enjoy a flawless filing record',
+                                style: TextStyle(fontSize: 14, color: Colors.black),
+                              ),
                             ),
+                            // const SizedBox(
+                            //   height: 10,
+                            // ),
                             Row(
                               children: [
                                 Container(
                                   width: 3,
-                                  height: 21,
+                                  height: 25,
                                   color: AppColor.appOrange,
                                   margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
                                 ),
                                 const Text(
-                                  'Friendly Customer Service',
+                                  'Exceptional Customer Service',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
                                       fontSize: 18,
@@ -1107,9 +1135,16 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            const SizedBox(
-                              height: 10,
+                            Padding(
+                              padding: const EdgeInsets.only(left: 33, right: 20, bottom: 2), // Align with the text above
+                              child: Text(
+                                'Our friendly team is dedicated to making your tax filing experience smooth and stress-free',
+                                style: TextStyle(fontSize: 14, color: Colors.black),
+                              ),
                             ),
+                            // const SizedBox(
+                            //   height: 10,
+                            // ),
                           ],
                         ),
                       ),
