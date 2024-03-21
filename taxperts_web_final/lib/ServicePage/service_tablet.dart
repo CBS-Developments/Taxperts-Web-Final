@@ -22,6 +22,7 @@ class _ServiceTabletState extends State<ServiceTablet> {
     double p120 = screenWidth / 15;
     double p250 = screenWidth / 6;
     return  Scaffold(
+        backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -102,7 +103,7 @@ class _ServiceTabletState extends State<ServiceTablet> {
                         Text(
                           'SERVICES',
                           style: TextStyle(
-                            fontSize: 50,
+                            fontSize: 60,
                             color: AppColor.appTeal,
                             fontWeight: FontWeight.w800,
                           ),
