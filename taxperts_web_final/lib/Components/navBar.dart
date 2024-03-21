@@ -160,3 +160,101 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
     );
   }
 }
+
+class NavigationBarTablet extends StatefulWidget {
+  const NavigationBarTablet({Key? key}) : super(key: key);
+
+  @override
+  State<NavigationBarTablet> createState() => _NavigationBarTabletState();
+}
+
+class _NavigationBarTabletState extends State<NavigationBarTablet> {
+  @override
+  Widget build(BuildContext context) {
+    Color activeColor = AppColor.appTeal;
+    Color inactiveColor = Colors.black;
+    Color startNowColor = AppColor.appOrange;
+    double fontSize = 12;
+    FontWeight fontWeight = FontWeight.w500;
+
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+
+        PopupMenuButton<String>(
+          onSelected: (String value) {
+            switch (value) {
+              case 'Home':
+              // Action for Home
+                Navigator.of(context).pushNamed('/home');
+                break;
+              case 'Tax Calculator':
+              // Action for Tax Calculator
+                Navigator.of(context).pushNamed('/tax-calculator');
+                break;
+              case 'Services':
+              // Action for Services
+                Navigator.of(context).pushNamed('/services');
+                break;
+              case 'Resources':
+              // Action for Resources
+                Navigator.of(context).pushNamed('/resources');
+                break;
+              case 'Blog':
+              // Action for Blog
+                Navigator.of(context).pushNamed('/blog');
+                break;
+              case 'Vlog':
+              // Action for Blog
+                Navigator.of(context).pushNamed('/vlog');
+                break;
+              case 'Contact':
+              // Action for Contact
+                Navigator.of(context).pushNamed('/contact');
+                break;
+            // Add more cases for other menu items as needed
+              default:
+              // Handle unknown case
+                break;
+            }
+          },
+          itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+            _buildPopupMenuItem('Home', true), // Assuming no item is selected by default
+            _buildPopupMenuItem('Tax Calculator', false),
+            _buildPopupMenuItem('Services', false),
+            _buildPopupMenuItem('Resources', false),
+            _buildPopupMenuItem('Blog', false),
+            _buildPopupMenuItem('Vlog', false),
+            _buildPopupMenuItem('Contact', false),
+          ],
+          icon: Icon(
+            Icons.menu,
+            color: AppColor.appDarkGrey, // Set icon color here
+          ),
+        ),
+
+        // Padding(
+        //   padding: const EdgeInsets.symmetric(horizontal: 15.0),
+        //   child: Text(
+        //     'Start Now',
+        //     style: TextStyle(fontSize: 18),
+        //   ),
+        // ),
+      ],
+    );
+  }
+  PopupMenuEntry<String> _buildPopupMenuItem(String text, bool isSelected) {
+    return PopupMenuItem<String>(
+      value: text,
+      child: Text(
+        text,
+        style: TextStyle(
+          color: isSelected ? Colors.teal : Colors.black,
+          fontWeight: isSelected ? FontWeight.w400 : FontWeight.normal,
+          fontSize: 15,
+        ),
+      ),
+    );
+  }
+}
+
