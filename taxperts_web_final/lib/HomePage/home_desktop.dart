@@ -87,7 +87,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         0.1), // Shadow color with some transparency
                     spreadRadius: 0, // Spread radius
                     blurRadius: 4, // Blur radius
-                    offset: Offset(0, 2), // changes position of shadow
+                    offset: const Offset(0, 2), // changes position of shadow
                   ),
                 ],
                 // If you also want to round the corners of the container
@@ -111,7 +111,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 1,
             ),
             SizedBox(
@@ -134,7 +134,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       children: [
                         Row(
                           children: [
-                            Text(
+                            const Text(
                               'BEGIN YOUR JOURNEY TODAY WITH',
                               style: TextStyle(
                                 fontSize: 30,
@@ -161,7 +161,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           ),
                         ),
 
-                        Text(
+                        const Text(
                           '''Dive into unparalleled ease of your tax compliance with just a click. Say goodbye to the hassle \nand hello to a seamless tax filing experience, tailored just for you.''',
                           style: TextStyle(
                             fontSize: 16,
@@ -177,19 +177,19 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         //     color: Colors.black,
                         //   ),
                         // ),
-                        SizedBox(height: 100), // Space between text and button
+                        const SizedBox(height: 100), // Space between text and button
                         Row(
                           children: [
                             ElevatedButton(
                               onPressed: () {
                                 // Handle button tap
                               },
-                              child: Text(
+                              child: const Text(
                                 'Meet Tax Expert',
-                                style: TextStyle(fontSize: 18),
+                                style: TextStyle(fontSize: 16),
                               ),
                               style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(
+                                padding: const EdgeInsets.symmetric(
                                     horizontal: 36, vertical: 18),
                                 // fixedSize: const Size(
                                 //     220, 45), // Set the width and height
@@ -212,7 +212,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     Text(
                                       'Estimate Your Tax ',
                                       style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 16,
                                           color: AppColor.appTeal),
                                     ),
                                     Icon(
@@ -228,7 +228,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           ],
                         ),
 
-                        SizedBox(height: 30),
+                        const SizedBox(height: 30),
 
                         // Padding(
                         //   padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -263,7 +263,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
             SingleChildScrollView(
@@ -275,7 +275,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     padding: EdgeInsets.symmetric(horizontal: p30 + p15),
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           'TIN REGISTRATION',
                           style: TextStyle(
                               fontSize: 22,
@@ -291,14 +291,14 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 onPressed: () {
                                   // Handle button tap
                                 },
-                                child: Row(
+                                child: const Row(
                                   children: [
                                     Text(
                                       'Read More',
                                       style: TextStyle(fontSize: 14),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(
+                                      padding: EdgeInsets.only(
                                           top: 1.0, left: 2),
                                       child: Icon(
                                         Icons
@@ -310,7 +310,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   ],
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 30, vertical: 15),
                                   // fixedSize: const Size(
                                   //     220, 45), // Set the width and height
@@ -331,17 +331,17 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => REGFormDesktop(initialTaxType: 'TIN Registration'),
+                                      builder: (context) => const REGFormDesktop(initialTaxType: 'TIN Registration'),
                                     ),
                                   );
                                   // Handle button tap
                                 },
-                                child: Text(
+                                child: const Text(
                                   'Register Me',
                                   style: TextStyle(fontSize: 14),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 30, vertical: 15),
                                   // fixedSize: const Size(
                                   //     220, 45), // Set the width and height
@@ -363,7 +363,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     padding: EdgeInsets.symmetric(horizontal: p30 + p15),
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           'VAT/SSCL REGISTRATION',
                           style: TextStyle(
                               fontSize: 22,
@@ -379,14 +379,14 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 onPressed: () {
                                   // Handle button tap
                                 },
-                                child: Row(
+                                child: const Row(
                                   children: [
                                     Text(
                                       'Read More',
                                       style: TextStyle(fontSize: 14),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(
+                                      padding: EdgeInsets.only(
                                           top: 1.0, left: 2),
                                       child: Icon(
                                         Icons
@@ -398,7 +398,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   ],
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 30, vertical: 15),
                                   // fixedSize: const Size(
                                   //     220, 45), // Set the width and height
@@ -419,16 +419,16 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => REGFormDesktop(initialTaxType: 'VAT/SSCL Registration'),),
+                                      builder: (context) => const REGFormDesktop(initialTaxType: 'VAT/SSCL Registration'),),
                                   );
                                   // Handle button tap
                                 },
-                                child: Text(
+                                child: const Text(
                                   'Register Me',
                                   style: TextStyle(fontSize: 14),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 30, vertical: 15),
                                   // fixedSize: const Size(
                                   //     220, 45), // Set the width and height
@@ -450,7 +450,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     padding: EdgeInsets.symmetric(horizontal: p30 + p15),
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           'RETURN FILLING',
                           style: TextStyle(
                               fontSize: 22,
@@ -466,14 +466,14 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 onPressed: () {
                                   // Handle button tap
                                 },
-                                child: Row(
+                                child: const Row(
                                   children: [
                                     Text(
                                       'Read More',
                                       style: TextStyle(fontSize: 14),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(
+                                      padding: EdgeInsets.only(
                                           top: 1.0, left: 2),
                                       child: Icon(
                                         Icons
@@ -485,7 +485,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   ],
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 30, vertical: 15),
                                   // fixedSize: const Size(
                                   //     220, 45), // Set the width and height
@@ -506,16 +506,16 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => REGFormDesktop(initialTaxType: 'Return Filling Registration'),),
+                                      builder: (context) => const REGFormDesktop(initialTaxType: 'Return Filling Registration'),),
                                   );
                                   // Handle button tap
                                 },
-                                child: Text(
+                                child: const Text(
                                   'Register Me',
                                   style: TextStyle(fontSize: 14),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 30, vertical: 15),
                                   // fixedSize: const Size(
                                   //     220, 45), // Set the width and height
@@ -536,12 +536,12 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
-            Padding(
+            const Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
+                  EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
               child: Text(
                 'TAXPERT ALWAYS BEHIND YOU TO MEET YOUR COMPLIANCE OBLIGATIONS',
                 style: TextStyle(
@@ -550,53 +550,84 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     fontWeight: FontWeight.w600),
               ),
             ),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            //   child: SingleChildScrollView(
+            //     scrollDirection: Axis.horizontal,
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.center,
+            //       children: cardData.asMap().entries.map((entry) {
+            //         int idx = entry.key;
+            //         Map<String, String> card = entry.value;
+            //
+            //         return MouseRegion(
+            //           onEnter: (_) {
+            //             // Flip the card when the mouse enters
+            //             final key = cardKeys[idx];
+            //             key?.currentState?.toggleCard();
+            //           },
+            //           onExit: (_) {
+            //             // Reset the card to its original state when the mouse exits
+            //             final key = cardKeys[idx];
+            //             key?.currentState?.toggleCard();
+            //           },
+            //           child: Padding(
+            //             padding: EdgeInsets.symmetric(horizontal: p20),
+            //             child: FlipCard(
+            //               key:
+            //                   cardKeys[idx], // Assign a unique key to each card
+            //               flipOnTouch: false, // Disable flipping on touch
+            //               direction: FlipDirection.HORIZONTAL,
+            //               front: Card(
+            //                 child:
+            //                     Image.asset(card['frontImage']!, height: 196),
+            //               ),
+            //               back: Card(
+            //                 child: Image.asset(card['backImage']!, height: 196),
+            //               ),
+            //             ),
+            //           ),
+            //         );
+            //       }).toList(),
+            //     ),
+            //   ),
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: cardData.asMap().entries.map((entry) {
-                    int idx = entry.key;
-                    Map<String, String> card = entry.value;
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/IIT2.png', height: 196),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/CorporateITax2.png', height: 196),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/PartnershipTax2.png', height: 196),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/VAT2.png', height: 196),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: p20),
+                      child: Image.asset('images/SSCL2.png', height: 196),
+                    ),
+                  ],
 
-                    return MouseRegion(
-                      onEnter: (_) {
-                        // Flip the card when the mouse enters
-                        final key = cardKeys[idx];
-                        key?.currentState?.toggleCard();
-                      },
-                      onExit: (_) {
-                        // Reset the card to its original state when the mouse exits
-                        final key = cardKeys[idx];
-                        key?.currentState?.toggleCard();
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: p20),
-                        child: FlipCard(
-                          key:
-                              cardKeys[idx], // Assign a unique key to each card
-                          flipOnTouch: false, // Disable flipping on touch
-                          direction: FlipDirection.HORIZONTAL,
-                          front: Card(
-                            child:
-                                Image.asset(card['frontImage']!, height: 196),
-                          ),
-                          back: Card(
-                            child: Image.asset(card['backImage']!, height: 196),
-                          ),
-                        ),
-                      ),
-                    );
-                  }).toList(),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 30, horizontal: 15),
+              margin: const EdgeInsets.symmetric(vertical: 30, horizontal: 15),
               height: 500,
               width: 1000,
               decoration: BoxDecoration(
@@ -608,19 +639,19 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         .withOpacity(0.5), // Shadow color with opacity
                     spreadRadius: 1, // Spread radius
                     blurRadius: 3, // Blur radius
-                    offset: Offset(0, 1), // changes position of shadow
+                    offset: const Offset(0, 1), // changes position of shadow
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Padding(
+            const Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
+                  EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
               child: Text(
-                'EXCELLENCE IN TAX SIMPLIFICATION: SRI LANKA"S AWARD-WINNING TAX SERVICE COMPANY',
+                'EXCELLENCE IN TAX SIMPLIFICATION\n SRI LANKA"S AWARD-WINNING TAX SERVICE COMPANY',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 28,
@@ -628,7 +659,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     fontWeight: FontWeight.w600),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Row(
@@ -640,8 +671,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
+                          const Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Text(
                               'Digital Social Impact Award',
                               style: TextStyle(
@@ -653,17 +684,17 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Text(
-                              'Recognizing Our Pioneering Digital Tax Compliance Service in Sri Lanka',
+                              'Pioneering taxation-as-a-service company in Sri Lanka',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   color: AppColor.appTeal,
                                   fontSize: 20),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
+                          const Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Text(
-                              "We're honoured to receive the Digital Social Impact Award from the Information Communication Agency of Sri Lanka (ICTA) for introducing Sri Lanka's first digital tax compliance service. This groundbreaking initiative simplifies tax filing, making it more accessible and efficient for everyone. 'Thanks to this service, filing taxes is no longer a daunting task for me,' says Kanishka Weeramunda, a local entrepreneur, highlighting the profound impact on our community. This award sets a new standard for leveraging technology in tax compliance services. Stay tuned for how we plan to build on this achievement to further innovate and serve you better.",
+                              "Taxperts was honored to receive the Digital Social Impact Award from the Information Communication Agency of Sri Lanka (ICTA) for introducing Sri Lanka's first digital tax compliance service. This award sets a new standard for leveraging technology in tax compliance services. ",
                               style:
                                   TextStyle(color: Colors.black, fontSize: 16),
                             ),
@@ -708,8 +739,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
+                          const Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Text(
                               'NBQS Award',
                               style: TextStyle(
@@ -728,10 +759,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   fontSize: 20),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
+                          const Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Text(
-                              'We are proud to announce that the Chartered Institute for ICT, Colombo Chapter, has honoured us with the National Best Quality Software Award (NBQSA) for our pioneering tax computation system. This system, designed with both citizens and businesses in mind, simplifies the tax compliance process, making it more accessible and efficient than ever before. Our innovative approach to tax computation has not only streamlined the filing process but has also significantly reduced the potential for errors, enhancing user satisfaction across the board.',
+                              'The Chartered Institute for ICT, Colombo Chapter, has honored Taxperts with the National Best Quality Software Award (NBQSA) for pioneering tax computation system. This system, designed with both citizens and businesses in mind, simplifies the tax compliance process, making it more accessible and efficient than ever before. ',
                               style:
                                   TextStyle(color: Colors.black, fontSize: 16),
                             ),
@@ -750,8 +781,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
+                          const Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Text(
                               'National Ingenuity Award',
                               style: TextStyle(
@@ -767,14 +798,13 @@ class _HomeDesktopState extends State<HomeDesktop> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   color: AppColor.appTeal,
-                                  fontSize: 24),
+                                  fontSize: 20),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
+                          const Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Text(
-                              '''We are immensely proud to share that the Sri Lanka Association of Software and Services Companies (SLASSCOM) has honored us with the prestigious National Ingenuity Award. This award celebrates our leading-edge solution in business process management, specifically designed to enhance efficiency and effectiveness in the tax compliance sector. \n \nOur innovative approach, merging advanced technology with user-friendly design, has set new standards in how businesses manage their tax compliance workflows. This transformation has resulted in unparalleled productivity gains and significantly improved customer satisfaction levels. It's a clear indicator of our commitment to pushing boundaries and fostering innovation within our industry. \n \nExperience the innovation firsthand that's reshaping business process management in the tax compliance sphere. For a deeper dive into our award-winning solution and to discover how it can transform your business operations, we invite you to visit our website or reach out directly to our team. Let's elevate your business processes together.
-                            ''',
+                              'The Sri Lanka Association of Software and Services Companies (SLASSCOM) has honored Taxperts with the prestigious National Ingenuity Award. This award celebrates leading-edge solution in business process management, specifically designed to enhance efficiency and effectiveness in the tax compliance sector.',
                               style:
                                   TextStyle(color: Colors.black, fontSize: 16),
                             ),
@@ -797,20 +827,37 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
+              height: 20,
+            ),
+
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: p120),
+              child: Text("Experience the innovation firsthand that's reshaping business process management in the tax compliance sphere. For a deeper dive into our award-winning solution and to discover how it can transform your business operations, we invite you to visit our website or reach out directly to our team. Let's elevate your business processes in taxation together.",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: AppColor.appTeal,
+              ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+
+            const SizedBox(
               height: 40,
             ),
+
             Padding(
               padding: EdgeInsets.symmetric(horizontal: p120),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
+                  const Padding(
+                    padding: EdgeInsets.symmetric(
                       horizontal: 15.0,
                     ),
                     child: Text(
-                      'DIGITAL TAX SOLUTIONS TAILORED JUST',
+                      'Digital Tax Solutions Tailored Just for You',
                       style: TextStyle(
                           fontSize: 28,
                           color: Colors.black,
@@ -818,34 +865,22 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 15.0,
+                    padding: const EdgeInsets.only(
+                      left: 30,
                     ),
                     child: Text(
-                      "We're Here to Get Your Tax Right with Taxperts",
+                      "We're Here to Get Your Taxes Done Right with Taxperts",
                       style: TextStyle(
-                          fontSize: 22,
+                          fontSize: 20,
                           color: AppColor.appTeal,
                           fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 15.0,
-                    ),
-                    child: Text(
-                      'Embark on a journey to stress-free tax compliance with Taxperts, where our dedication to precision and your peace of mind comes first. Ready to change the way you think about taxes? Discover the Taxperts difference today',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.left,
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             SingleChildScrollView(
@@ -855,7 +890,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ServicePageCard(
+                    const ServicePageCard(
                       title: 'Tax Advisory',
                       description:
                           'Taxation is a critical factor for every citizen and business. We provide advise in planning your personal tax and business tax to maximize the benefits',
@@ -864,7 +899,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     SizedBox(
                       width: p30,
                     ),
-                    ServicePageCard(
+                    const ServicePageCard(
                       title: 'Tax Return',
                       description:
                           'We offer efficient and effective services in calculating and filing tax returns of citizens and businesses in Sri Lanka and overseas',
@@ -873,7 +908,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     SizedBox(
                       width: p30,
                     ),
-                    ServicePageCard(
+                    const ServicePageCard(
                       title: 'Expat Tax',
                       description:
                           'As an expat employee, you need to pay taxes for the income you received from Sri Lanka and file the return of income',
@@ -890,7 +925,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ServicePageCard(
+                    const ServicePageCard(
                       title: 'Transfer Pricing',
                       description:
                           'Transfer pricing regulation in Sri Lanka is increasing and businesses with associated entities are required to file transfer pricing returns',
@@ -899,7 +934,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     SizedBox(
                       width: p30,
                     ),
-                    ServicePageCard(
+                    const ServicePageCard(
                       title: 'Tax Calculator',
                       description:
                           'Calculate your quarterly income tax for free with Taxperts, covering the fiscal year from April 1st to March 31st. Stay updated on how tax changes affect you, all in one place',
@@ -908,7 +943,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     SizedBox(
                       width: p30,
                     ),
-                    ServicePageCard(
+                    const ServicePageCard(
                       title: 'Tax Calendar',
                       description:
                           'A Tax Calendar is a comprehensive guide designed to assist individuals, businesses, and tax professionals in keeping track of important tax dates throughout the year',
@@ -918,7 +953,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
             SingleChildScrollView(
@@ -940,7 +975,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                   child: Row(
                     children: [
                       Image.asset('images/whych.png', height: 500),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       SizedBox(
@@ -949,25 +984,25 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              'Why Choose Us?',
+                            const Text(
+                              'Simplifying Your Taxes with Just a Click',
                               style: TextStyle(
-                                  fontSize: 28,
+                                  fontSize: 22,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black),
                             ),
-                            SizedBox(
-                              height: 15,
-                            ),
+                            // const SizedBox(
+                            //   height: 10,
+                            // ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: Text(
-                                "Experience Sri Lanka's First Online Taxation Service. Simplifying Taxes with a Click.?",
+                                "Experience the Sri Lanka’s premier online taxation service",
                                 style: TextStyle(
                                     fontSize: 16, color: AppColor.appTeal),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Row(
@@ -976,19 +1011,19 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   width: 3,
                                   height: 21,
                                   color: AppColor.appOrange,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
                                 ),
-                                Text(
+                                const Text(
                                   'Ontime Service Delivery ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
                                       fontSize: 18,
                                       color: Colors.black),
-                                )
+                                ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -997,10 +1032,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   width: 3,
                                   height: 21,
                                   color: AppColor.appOrange,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
                                 ),
-                                Text(
+                                const Text(
                                   'Highly Confidential',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
@@ -1009,7 +1044,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -1018,10 +1053,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   width: 3,
                                   height: 21,
                                   color: AppColor.appOrange,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
                                 ),
-                                Text(
+                                const Text(
                                   'Accurate Tax Filling',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
@@ -1030,7 +1065,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -1039,10 +1074,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   width: 3,
                                   height: 21,
                                   color: AppColor.appOrange,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
                                 ),
-                                Text(
+                                const Text(
                                   'Avoid Tax Filling Penaltiesg',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
@@ -1051,7 +1086,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -1060,10 +1095,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   width: 3,
                                   height: 21,
                                   color: AppColor.appOrange,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 10, right: 20, top: 10, bottom: 10),
                                 ),
-                                Text(
+                                const Text(
                                   'Friendly Customer Service',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w800,
@@ -1072,7 +1107,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                           ],
@@ -1083,14 +1118,14 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
+            const Padding(
+              padding: EdgeInsets.symmetric(
                 horizontal: 15.0,
               ),
               child: Text(
@@ -1114,7 +1149,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
             SingleChildScrollView(
@@ -1155,7 +1190,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 }),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 150,
             ),
             Center(
@@ -1180,7 +1215,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           onPressed: () {
                             // Handle button press
                           },
-                          child: Text(
+                          child: const Text(
                             'Contact Us',
                             style: TextStyle(
                               fontSize: 16, // Set your desired font size here
@@ -1195,11 +1230,11 @@ class _HomeDesktopState extends State<HomeDesktop> {
                               borderRadius:
                                   BorderRadius.circular(25), // Rounded button
                             ),
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 32,
                                 vertical: 16), // Set your desired padding here
                             minimumSize:
-                                Size(180, 48), // Set the button's size here
+                                const Size(180, 48), // Set the button's size here
                           ),
                         ),
                       ),
@@ -1208,10 +1243,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 90,
             ),
-            Footer(),
+            const Footer(),
           ],
         ),
       ),
