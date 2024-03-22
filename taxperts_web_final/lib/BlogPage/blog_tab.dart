@@ -100,7 +100,7 @@ class _BlogTabletState extends State<BlogTablet> {
                       Text(
                         'BLOG POST',
                         style: TextStyle(
-                          fontSize: 60,
+                          fontSize: 50,
                           color: AppColor.appTeal,
                           fontWeight: FontWeight.w800,
                         ),
@@ -108,9 +108,9 @@ class _BlogTabletState extends State<BlogTablet> {
                       const Padding(
                         padding: EdgeInsets.only(bottom: 10.0),
                         child: Text(
-                          '''Taxperts guide you through the ever-evolving landscape   \nof taxation, effortlessly. Don't miss out on valuable insights   \nthat could make a difference in your tax planning and\n compliance. Visit our blog and subscribe today. ''',
+                          '''Taxperts guide you through the ever-evolving landscape \nof taxation, effortlessly. Don't miss out on valuable insights   \nthat could make a difference in your tax planning and\ncompliance. Visit our blog and subscribe today. ''',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 15,
                             color: Colors
                                 .black, // Make sure AppColor class is defined or imported
                           ),

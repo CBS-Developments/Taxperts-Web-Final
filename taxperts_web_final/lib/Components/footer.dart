@@ -300,7 +300,7 @@ class FooterTab extends StatelessWidget {
     double p120 = screenWidth / 15;
     double p20 = screenWidth / 90;
     double p90 = screenWidth / 20;
-    double fontSize = 16;
+    double fontSize = 14;
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(

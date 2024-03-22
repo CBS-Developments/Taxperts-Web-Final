@@ -100,7 +100,7 @@ class _VlogTabletState extends State<VlogTablet> {
                       Text(
                         'VLOG',
                         style: TextStyle(
-                          fontSize: 60,
+                          fontSize: 50,
                           color: AppColor.appTeal,
                           fontWeight: FontWeight.w800,
                         ),
@@ -110,7 +110,7 @@ class _VlogTabletState extends State<VlogTablet> {
                         child: Text(
                           '''We believe in doing your taxes right. We’re committed to   \nserving you assuring your comfort in tax compliance decision. ''',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 15,
                             color: Colors
                                 .black, // Make sure AppColor class is defined or imported
                           ),

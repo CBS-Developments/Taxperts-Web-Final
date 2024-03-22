@@ -109,7 +109,7 @@ class _HomeTabState extends State<HomeTab> {
                             Text(
                               'BEGIN YOUR JOURNEY TODAY WITH TAXPERTS',
                               style: TextStyle(
-                                fontSize: 25,
+                                fontSize: 15,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -119,7 +119,7 @@ class _HomeTabState extends State<HomeTab> {
                         Text(
                           'DO YOUR TAXES RIGHT',
                           style: TextStyle(
-                            fontSize: 45,
+                            fontSize: 35,
                             color: AppColor.appTeal,
                             fontWeight: FontWeight.w800,
                           ),
@@ -128,7 +128,7 @@ class _HomeTabState extends State<HomeTab> {
                         const Text(
                           '''Dive into unparalleled ease of your tax compliance with just a click. \n Say goodbye to the hassle and hello to a seamless tax filing\n experience, tailored just for you.''',
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 14,
                             color: Colors
                                 .black, // Make sure AppColor class is defined or imported
                           ),
@@ -206,7 +206,7 @@ class _HomeTabState extends State<HomeTab> {
                         const Text(
                           'TIN REGISTRATION',
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.w600),
                         ),
@@ -294,7 +294,7 @@ class _HomeTabState extends State<HomeTab> {
                         const Text(
                           'VAT/SSCL REGISTRATION',
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.w600),
                         ),
@@ -386,7 +386,7 @@ class _HomeTabState extends State<HomeTab> {
                   const Text(
                     'RETURN FILLING',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black,
                         fontWeight: FontWeight.w600),
                   ),
@@ -479,7 +479,7 @@ class _HomeTabState extends State<HomeTab> {
                 'TAXPERT ALWAYS BEHIND YOU TO MEET YOUR COMPLIANCE OBLIGATIONS',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 22,
                     color: Colors.black,
                     fontWeight: FontWeight.w600),
               ),
@@ -551,7 +551,7 @@ class _HomeTabState extends State<HomeTab> {
                 'EXCELLENCE IN TAX SIMPLIFICATION\n SRI LANKA"S AWARD-WINNING TAX SERVICE COMPANY',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 22,
                     color: Colors.black,
                     fontWeight: FontWeight.w600),
               ),
@@ -572,7 +572,7 @@ class _HomeTabState extends State<HomeTab> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black,
-                                  fontSize: 22),
+                                  fontSize: 20),
                             ),
                           ),
                           Padding(
@@ -640,7 +640,7 @@ class _HomeTabState extends State<HomeTab> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black,
-                                  fontSize: 22),
+                                  fontSize: 20),
                             ),
                           ),
                           Padding(
@@ -682,7 +682,7 @@ class _HomeTabState extends State<HomeTab> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black,
-                                  fontSize: 22),
+                                  fontSize: 20),
                             ),
                           ),
                           Padding(
@@ -726,7 +726,7 @@ class _HomeTabState extends State<HomeTab> {
               padding: EdgeInsets.symmetric(horizontal: p120),
               child: Text("Experience the innovation firsthand that's reshaping business process management in the tax compliance sphere. For a deeper dive into our award-winning solution and to discover how it can transform your business operations, we invite you to visit our website or reach out directly to our team. Let's elevate your business processes in taxation together.",
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: AppColor.appTeal,
                 ),
@@ -735,7 +735,7 @@ class _HomeTabState extends State<HomeTab> {
             ),
 
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: p120),
@@ -749,7 +749,7 @@ class _HomeTabState extends State<HomeTab> {
                     child: Text(
                       'Digital Tax Solutions Tailored Just for You',
                       style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 22,
                           color: Colors.black,
                           fontWeight: FontWeight.w600),
                     ),
@@ -1051,7 +1051,7 @@ class _HomeTabState extends State<HomeTab> {
               child: Text(
                 'LATEST BLOG POST',
                 style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 22,
                     color: Colors.black,
                     fontWeight: FontWeight.w600),
               ),
@@ -1079,7 +1079,7 @@ class _HomeTabState extends State<HomeTab> {
               scrollDirection: Axis.horizontal,
               child: Wrap(
                 spacing: 20, // Horizontal space between cards
-                runSpacing: 30, // Vertical space between lines
+                runSpacing: 10, // Vertical space between lines
                 children: List.generate(3, (index) {
                   // Define the image paths and dates for each card
                   final imagePath = index == 0

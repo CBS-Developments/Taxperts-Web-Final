@@ -115,7 +115,7 @@ class ServicePageCardTab extends StatelessWidget {
               title,
               style: TextStyle(
                   fontWeight: FontWeight.w800,
-                  fontSize: 24,
+                  fontSize: 20,
                   color: AppColor.appTeal
               ),
             ),

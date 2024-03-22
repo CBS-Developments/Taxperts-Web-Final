@@ -24,7 +24,7 @@ class BlogCard extends StatelessWidget {
             Image.asset(
               imagePath,
               width: 300,
-              height: 200, // Set a fixed height for the image
+              height: 250, // Set a fixed height for the image
               fit: BoxFit.cover,
             ),
             Positioned(
@@ -70,7 +70,7 @@ class BlogCard extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: Colors.black,
-                      fontSize: 16),
+                      fontSize: 14),
                 ),
               ),
             ),
@@ -91,7 +91,7 @@ class BlogCard extends StatelessWidget {
                       Icons.keyboard_double_arrow_right_rounded,
                       color:
                       Colors.white, // Icon color green
-                      size: 22,
+                      size: 20,
                     ),
                   ),
                 ],
