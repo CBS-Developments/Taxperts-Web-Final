@@ -174,7 +174,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           children: [
                             ElevatedButton(
                               onPressed: () {
-                                // Handle button tap
+                                Navigator.of(context).pushNamed('/contact');// Handle button tap
                               },
                               child: const Text(
                                 'Meet Tax Expert',
@@ -197,7 +197,9 @@ class _HomeDesktopState extends State<HomeDesktop> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 20.0),
                               child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context).pushNamed('/tax-calculator');
+                                },
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
@@ -1240,7 +1242,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         alignment: Alignment.centerRight,
                         child: ElevatedButton(
                           onPressed: () {
-                            // Handle button press
+                            Navigator.of(context).pushNamed('/start');// Handle button press
                           },
                           child: const Text(
                             'Contact Us',

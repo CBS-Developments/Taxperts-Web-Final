@@ -303,7 +303,7 @@ class _ContactDesktopState extends State<ContactDesktop> {
                         alignment: Alignment.centerRight,
                         child: ElevatedButton(
                           onPressed: () {
-                            // Handle button press
+                            Navigator.of(context).pushNamed('/start');// Handle button press
                           },
                           child: Text(
                             'Contact Us',

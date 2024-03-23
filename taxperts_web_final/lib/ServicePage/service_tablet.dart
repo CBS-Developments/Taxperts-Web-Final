@@ -157,7 +157,7 @@ class _ServiceTabletState extends State<ServiceTablet> {
                 ],
               ),
             ),
-            const SizedBox(height: 40,),
+            const SizedBox(height: 20,),
             const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -177,7 +177,7 @@ class _ServiceTabletState extends State<ServiceTablet> {
                 ],
               ),
             ),
-            const SizedBox(height: 40,),
+            const SizedBox(height: 20,),
             const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -222,7 +222,7 @@ class _ServiceTabletState extends State<ServiceTablet> {
                           alignment: Alignment.centerRight,
                           child: ElevatedButton(
                             onPressed: () {
-                              // Handle button press
+                              Navigator.of(context).pushNamed('/start');// Handle button press
                             },
                             child: const Text(
                               'Contact Us',
