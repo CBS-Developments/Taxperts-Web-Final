@@ -319,121 +319,124 @@ class FooterTab extends StatelessWidget {
         children: [
           // Logo or text widget goes here, if necessary.
           Image.asset('images/whitelogo.png', height: 60),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Home',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  )),
-              Container(
-                height: 15, // Set the vertical divider height to 20
-                child: VerticalDivider(
-                  color: Colors.white,
-                  thickness: 1,
-                  width: p20,
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Home',
+                      style: TextStyle(
+                          fontSize: fontSize,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
+                    )),
+                Container(
+                  height: 15, // Set the vertical divider height to 20
+                  child: VerticalDivider(
+                    color: Colors.white,
+                    thickness: 1,
+                    width: p20,
+                  ),
                 ),
-              ),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Tax Calculator',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  )),
-              Container(
-                height: 15, // Set the vertical divider height to 20
-                child: VerticalDivider(
-                  color: Colors.white,
-                  thickness: 1,
-                  width: p20,
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Tax Calculator',
+                      style: TextStyle(
+                          fontSize: fontSize,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
+                    )),
+                Container(
+                  height: 15, // Set the vertical divider height to 20
+                  child: VerticalDivider(
+                    color: Colors.white,
+                    thickness: 1,
+                    width: p20,
+                  ),
                 ),
-              ),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Services',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  )),
-              Container(
-                height: 15, // Set the vertical divider height to 20
-                child: VerticalDivider(
-                  color: Colors.white,
-                  thickness: 1,
-                  width: p20,
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Services',
+                      style: TextStyle(
+                          fontSize: fontSize,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
+                    )),
+                Container(
+                  height: 15, // Set the vertical divider height to 20
+                  child: VerticalDivider(
+                    color: Colors.white,
+                    thickness: 1,
+                    width: p20,
+                  ),
                 ),
-              ),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Resources',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  )),
-              Container(
-                height: 15, // Set the vertical divider height to 20
-                child: VerticalDivider(
-                  color: Colors.white,
-                  thickness: 1,
-                  width: p20,
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Resources',
+                      style: TextStyle(
+                          fontSize: fontSize,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
+                    )),
+                Container(
+                  height: 15, // Set the vertical divider height to 20
+                  child: VerticalDivider(
+                    color: Colors.white,
+                    thickness: 1,
+                    width: p20,
+                  ),
                 ),
-              ),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Blog',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  )),
-              Container(
-                height: 15, // Set the vertical divider height to 20
-                child: VerticalDivider(
-                  color: Colors.white,
-                  thickness: 1,
-                  width: p20,
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Blog',
+                      style: TextStyle(
+                          fontSize: fontSize,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
+                    )),
+                Container(
+                  height: 15, // Set the vertical divider height to 20
+                  child: VerticalDivider(
+                    color: Colors.white,
+                    thickness: 1,
+                    width: p20,
+                  ),
                 ),
-              ),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Vlog',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  )),
-              Container(
-                height: 15, // Set the vertical divider height to 20
-                child: VerticalDivider(
-                  color: Colors.white,
-                  thickness: 1,
-                  width: p20,
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Vlog',
+                      style: TextStyle(
+                          fontSize: fontSize,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
+                    )),
+                Container(
+                  height: 15, // Set the vertical divider height to 20
+                  child: VerticalDivider(
+                    color: Colors.white,
+                    thickness: 1,
+                    width: p20,
+                  ),
                 ),
-              ),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Contact',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  )),
-            ],
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Contact',
+                      style: TextStyle(
+                          fontSize: fontSize,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
+                    )),
+              ],
+            ),
           ),
           SizedBox(height: 20),
           Row(

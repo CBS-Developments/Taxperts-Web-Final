@@ -511,18 +511,21 @@ class _HomeTabState extends State<HomeTab> {
               ),
             ),
             SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: p30),
-                  child: Image.asset('images/VAT2.png', height: 180),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: p30),
-                  child: Image.asset('images/SSCL2.png', height: 180),
-                ),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p30),
+                    child: Image.asset('images/VAT2.png', height: 180),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: p30),
+                    child: Image.asset('images/SSCL2.png', height: 180),
+                  ),
+                ],
+              ),
             ),
 
             const SizedBox(
