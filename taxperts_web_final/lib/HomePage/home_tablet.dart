@@ -752,7 +752,7 @@ class _HomeTabState extends State<HomeTab> {
                       horizontal: 15.0,
                     ),
                     child: Text(
-                      'Digital Tax Solutions Tailored Just for You',
+                      'DIGITAL TAX SOLUTIONS TAILORED JUST FOR YOU',
                       style: TextStyle(
                           fontSize: 22,
                           color: Colors.black,

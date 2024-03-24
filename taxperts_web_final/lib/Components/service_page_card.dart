@@ -151,3 +151,79 @@ class ServicePageCardTab extends StatelessWidget {
     );
   }
 }
+
+class ServicePageCardMob extends StatelessWidget {
+  final String title;
+  final String description;
+  final double spaceHeight;
+
+
+  const ServicePageCardMob({
+    Key? key,
+    required this.title,
+    required this.description,
+    required this.spaceHeight,
+
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      shadowColor: Colors.black, // You can customize the shadow color
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0), // Set the border radius here
+        side: BorderSide(
+          color: AppColor.appLightBlue, // Set the border color here
+          width: 1.0, // Set the border width here
+        ),
+      ),
+      child: Container(
+        width: 180,
+        height: 165,
+        padding: EdgeInsets.symmetric(horizontal: 5.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(height: 5),
+            Text(
+              title,
+              style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 14,
+                  color: AppColor.appTeal
+              ),
+            ),
+            SizedBox(height: 5),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 5.0),
+              child: Text(
+                description,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 10,
+                ),
+              ),
+            ),
+
+            // SizedBox(height: spaceHeight),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    // Handle Learn More tap
+                  },
+                  child: Text('Learn More >>',style: TextStyle(fontSize:10,color: AppColor.appOrange),),
+                ),
+              ],
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+
