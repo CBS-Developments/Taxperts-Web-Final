@@ -318,7 +318,7 @@ class FooterTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Logo or text widget goes here, if necessary.
-          Image.asset('images/whitelogo.png', height: 60),
+          Center(child: Image.asset('images/whitelogo.png', height: 50)),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -452,7 +452,7 @@ class FooterTab extends StatelessWidget {
                 padding: const EdgeInsets.all(5.0),
                 child: SelectableText(
                   'connect@taxperts.lk',
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(fontSize: 12, color: Colors.white),
                 ),
               ),
             ],
@@ -470,7 +470,7 @@ class FooterTab extends StatelessWidget {
                 padding: const EdgeInsets.all(5.0),
                 child: SelectableText(
                   ' \n+94 77 7 145 347\n+94 11 2 424 922',
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(fontSize: 12, color: Colors.white),
                 ),
               ),
             ],
@@ -490,7 +490,7 @@ class FooterTab extends StatelessWidget {
                   ' \n'
                       'Monday - Friday: 8.30 - 17.30\n'
                       'Saturday : 9.00 - 01.00',
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(fontSize: 12, color: Colors.white),
                 ),
               ),
             ],
@@ -508,7 +508,7 @@ class FooterTab extends StatelessWidget {
                 padding: const EdgeInsets.all(5.0),
                 child: SelectableText(
                   '\nTaxperts Lanka Pvt. Ltd\nNo. 101, Olcott Mawatha, Colombo 11',
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(fontSize: 12, color: Colors.white),
                 ),
               ),
             ],
@@ -530,7 +530,7 @@ class FooterTab extends StatelessWidget {
           SizedBox(height: 20),
           const Center(
             child: Text('© Copyright Taxperts 2024. All Rights Reserved',
-                style: TextStyle(color: Colors.white, fontSize: 14)),
+                style: TextStyle(color: Colors.white, fontSize: 10)),
           ),
         ],
 
