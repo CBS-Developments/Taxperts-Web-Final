@@ -101,7 +101,7 @@ class _BlogTabletState extends State<BlogTablet> {
                         Text(
                           'BLOG POST',
                           style: TextStyle(
-                            fontSize: 50,
+                            fontSize: 45,
                             color: AppColor.appTeal,
                             fontWeight: FontWeight.w800,
                           ),
@@ -111,7 +111,7 @@ class _BlogTabletState extends State<BlogTablet> {
                           child: Text(
                             '''Taxperts guide you through the ever-evolving landscape \nof taxation, effortlessly. Don't miss out on valuable insights   \nthat could make a difference in your tax planning and\ncompliance. Visit our blog and subscribe today. ''',
                             style: TextStyle(
-                              fontSize: 15,
+                              fontSize: 12,
                               color: Colors
                                   .black, // Make sure AppColor class is defined or imported
                             ),

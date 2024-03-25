@@ -103,7 +103,7 @@ class _ServiceTabletState extends State<ServiceTablet> {
                         Text(
                           'SERVICES',
                           style: TextStyle(
-                            fontSize: 50,
+                            fontSize: 45,
                             color: AppColor.appTeal,
                             fontWeight: FontWeight.w800,
                           ),
@@ -113,7 +113,7 @@ class _ServiceTabletState extends State<ServiceTablet> {
                           child: Text(
                             '''Get Your Taxes Done Right with Taxperts''',
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -123,7 +123,7 @@ class _ServiceTabletState extends State<ServiceTablet> {
                           child: Text(
                             '''Embark on a journey to stress-free tax compliance with \nTaxperts, where our dedication to precision and your peace\nof mind comes first. Ready to change the way you think about\ntaxes? Discover the Taxperts difference today.''',
                             style: TextStyle(
-                              fontSize: 15,
+                              fontSize: 12,
                               color: Colors
                                   .black, // Make sure AppColor class is defined or imported
                             ),

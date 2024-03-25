@@ -102,7 +102,7 @@ class _ContactTabletState extends State<ContactTablet> {
                           Text(
                             'CONTACT',
                             style: TextStyle(
-                              fontSize: 60,
+                              fontSize: 45,
                               color: AppColor.appTeal,
                               fontWeight: FontWeight.w800,
                             ),
@@ -112,114 +112,118 @@ class _ContactTabletState extends State<ContactTablet> {
                             child: Text(
                               '''Contact us for more detail''',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 15,
                                 color: Colors
                                     .black, // Make sure AppColor class is defined or imported
                               ),
                             ),
                           ),
                           SizedBox(height: 60),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                            child: Row(
-                              children: [
-                                Container(
-                                  child: Icon(
-                                    Icons.call_outlined,
-                                    color: Colors.white,
-                                  ),
-                                  height: 50,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                      color: AppColor.appTeal,
-                                      borderRadius: BorderRadius.circular(50)),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15.0),
-                                  child: Text(
-                                    '+94 77 7 148 839',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ),
-                                Container(
-                                  width: 2,
-                                  height: 20,
-                                  color: Colors.black,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15.0),
-                                  child: Text(
-                                    '+94 77 7 148 839',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                            child: Row(
-                              children: [
-                                Container(
-                                  child: Icon(
-                                    Icons.email_outlined,
-                                    color: Colors.white,
-                                  ),
-                                  height: 50,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                      color: AppColor.appTeal,
-                                      borderRadius: BorderRadius.circular(50)),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15.0),
-                                  child: Text(
-                                    'connect@taxperts.lk',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start, // Aligns widgets at the start point vertically
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                                child: SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: Icon(
+                                          Icons.call_outlined,
+                                          color: Colors.white,
+                                          size: 15,
+                                        ),
+                                        height: 25,
+                                        width: 25,
+                                        decoration: BoxDecoration(
+                                            color: AppColor.appTeal,
+                                            borderRadius: BorderRadius.circular(50)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 15.0, right: 5),
+                                        child: Text(
+                                          '+94 77 7 148 839',
+                                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                                        ),
+                                      ),
+                                      Container(
+                                        width: 2,
+                                        height: 20,
+                                        color: Colors.black,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(right: 5.0, left: 5),
+                                        child: Text(
+                                          '+94 77 7 148 839',
+                                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                            child: Row(
-                              children: [
-                                Container(
-                                  child: Icon(
-                                    Icons.location_on_outlined,
-                                    color: Colors.white,
+                              ),
+                              SizedBox(height: 20),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 15.0), // Adjusted for consistency
+                                child: SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: Icon(
+                                          Icons.email_outlined,
+                                          color: Colors.white,
+                                          size: 15,
+                                        ),
+                                        height: 25,
+                                        width: 25,
+                                        decoration: BoxDecoration(
+                                            color: AppColor.appTeal,
+                                            borderRadius: BorderRadius.circular(50)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 15.0, right: 5),
+                                        child: Text(
+                                          'connect@taxperts.lk',
+                                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  height: 50,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                      color: AppColor.appTeal,
-                                      borderRadius: BorderRadius.circular(50)),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15.0),
-                                  child: Text(
-                                    "\nTaxperts Lanka Pvt. Ltd \nNo. 101, Olcott Mawatha, Colombo 11. \nSri Lanka",
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500),
+                              ),
+                              SizedBox(height: 20),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                                child: SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: Icon(
+                                          Icons.location_on_outlined,
+                                          color: Colors.white,
+                                          size: 15,
+                                        ),
+                                        height: 25,
+                                        width: 25,
+                                        decoration: BoxDecoration(
+                                            color: AppColor.appTeal,
+                                            borderRadius: BorderRadius.circular(50)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 15.0, right: 5),
+                                        child: Text(
+                                          "Taxperts Lanka Pvt. Ltd \nNo. 101, Olcott Mawatha, Colombo 11. \nSri Lanka",
+                                          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
