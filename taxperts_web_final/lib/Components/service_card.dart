@@ -53,3 +53,56 @@ class ServiceCard extends StatelessWidget {
     );
   }
 }
+
+class ServiceCardMob extends StatelessWidget {
+  final String imagePath;
+  final String serviceDescription;
+  final String serviceTopic;
+
+  const ServiceCardMob({
+    Key? key,
+    required this.imagePath,
+    required this.serviceDescription, required this.serviceTopic,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double p30 = screenWidth / 60;
+    double p15 = screenWidth / 120;
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: p30),
+      width: 250,
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 10),
+            child: Text(
+              serviceTopic,
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  color: AppColor.appTeal
+              ),
+            ),
+          ),
+          Image.asset(
+            imagePath,
+            fit: BoxFit.cover,
+            width: 160,
+            height: 150,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20),
+            child: Text(
+              serviceDescription,
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
