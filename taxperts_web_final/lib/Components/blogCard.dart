@@ -116,6 +116,120 @@ class BlogCard extends StatelessWidget {
   }
 }
 
+class BlogCardMob extends StatelessWidget {
+  final String imagePath;
+  final String date;
+  final String topic;
+
+  const BlogCardMob({
+    Key? key,
+    required this.imagePath,
+    required this.date,
+    required this.topic,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Stack(
+          alignment: Alignment.bottomLeft,
+          children: [
+            Image.asset(
+              imagePath,
+              width: 150,
+              height: 100, // Set a fixed height for the image
+              fit: BoxFit.cover,
+            ),
+            Positioned(
+              bottom:
+              0, // Align bottom edge of triangle with bottom edge of image
+              right: 0, // Align right edge of triangle with right edge of image
+              child: ClipPath(
+                clipper: TriangleClipper(), // Use the custom clipper
+                child: Container(
+                  margin: EdgeInsets.only(bottom: 10, right: 10),
+                  width: 100,
+                  height: 65,
+                  color: AppColor.appTeal,
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        date,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        Column(
+          children: [
+            SizedBox(
+              width: 200,
+              child: Padding(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                child: Text(
+                  topic,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black,
+                      fontSize: 12),
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Handle button tap
+              },
+              child: Row(
+                children: [
+                  Text(
+                    'Read More',
+                    style: TextStyle(fontSize: 10),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2.0),
+                    child: Icon(
+                      Icons.keyboard_double_arrow_right_rounded,
+                      color:
+                      Colors.white, // Icon color green
+                      size: 15,
+                    ),
+                  ),
+                ],
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(
+                    horizontal: 20, vertical: 10),
+                // fixedSize: const Size(
+                //     220, 45), // Set the width and height
+                primary: AppColor
+                    .appOrange, // Set the background color to green
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(
+                      30), // Set the border radius
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
 class TriangleClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {

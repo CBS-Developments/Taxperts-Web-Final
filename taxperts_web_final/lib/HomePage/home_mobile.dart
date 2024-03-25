@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Components/blogCard.dart';
 import '../Components/navBar.dart';
 import '../Components/service_page_card.dart';
 import '../colors.dart';
@@ -12,6 +13,8 @@ class HomeMobile extends StatefulWidget {
 }
 
 class _HomeMobileState extends State<HomeMobile> {
+  Map<int, bool> hoverStates = {};
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -1007,17 +1010,19 @@ class _HomeMobileState extends State<HomeMobile> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Padding(
+                  const Padding(
                     padding:
-                    EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
-                    child: Text(
-                      'LATEST BLOG POST',
-                      style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
+                    EdgeInsets.symmetric(horizontal: 15.0),
+                    child: Center(
+                      child: Text(
+                        'LATEST BLOG POST',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
                   Padding(
@@ -1033,6 +1038,42 @@ class _HomeMobileState extends State<HomeMobile> {
                       textAlign: TextAlign.center,
                     ),
                   ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Wrap(
+                      spacing: 15, // Horizontal space between cards
+                      runSpacing: 5, // Vertical space between lines
+                      children: List.generate(3, (index) {
+                        // Define the image paths and dates for each card
+                        final imagePath = index == 0
+                            ? 'images/blog1.png'
+                            : index == 1
+                            ? 'images/blog2.png'
+                            : 'images/blog3.png';
+                        final topic = index == 0
+                            ? 'Impact of digital adoption for tax revenue'
+                            : index == 1
+                            ? 'Tradeoff between direct taxes and indirect taxes'
+                            : 'Service Oriented Tax System';
+                        final date = index == 0
+                            ? '20\nFeb' // Using \n to insert a newline character
+                            : index == 1
+                            ? '21\nFeb' // Another newline character
+                            : '22\nFeb'; // And another one
+
+                        return BlogCardMob(
+                          imagePath: imagePath,
+                          date: date,
+                          topic: topic,
+                          // Assuming BlogCard is modified to include a "Read More" button
+                        );
+                      }),
+                    ),
+                  ),
+
 
                 ],
               ),
