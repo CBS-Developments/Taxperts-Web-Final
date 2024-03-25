@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Components/blogCard.dart';
+import '../Components/footer.dart';
 import '../Components/navBar.dart';
 import '../Components/service_page_card.dart';
 import '../colors.dart';
@@ -142,7 +143,7 @@ class _HomeMobileState extends State<HomeMobile> {
                           ),
                           style: ElevatedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 25, vertical: 18),
+                                horizontal: 20, vertical: 10),
                             // fixedSize: const Size(
                             //     220, 45), // Set the width and height
                             primary: AppColor
@@ -155,7 +156,7 @@ class _HomeMobileState extends State<HomeMobile> {
                         ),
                         Padding(
                           padding:
-                          const EdgeInsets.symmetric(horizontal: 10.0,vertical: 15),
+                          const EdgeInsets.symmetric(horizontal: 10.0,vertical: 5),
                           child: TextButton(
                             onPressed: () {
                               Navigator.of(context).pushNamed('/tax-calculator');
@@ -191,7 +192,7 @@ class _HomeMobileState extends State<HomeMobile> {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10 ),
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 15 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -233,7 +234,7 @@ class _HomeMobileState extends State<HomeMobile> {
                               ),
                               style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 25, vertical: 15),
+                                    horizontal: 15, vertical: 5),
                                 // fixedSize: const Size(
                                 //     220, 45), // Set the width and height
                                 primary: AppColor
@@ -263,7 +264,7 @@ class _HomeMobileState extends State<HomeMobile> {
                               ),
                               style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 25, vertical: 15),
+                                    horizontal: 15, vertical: 5),
                                 // fixedSize: const Size(
                                 //     220, 45), // Set the width and height
                                 primary: AppColor
@@ -285,12 +286,12 @@ class _HomeMobileState extends State<HomeMobile> {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10 ),
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 15 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'TIN REGISTRATION',
+                      'VAT/SSCL REGISTRATION',
                       style: TextStyle(
                           fontSize: 12,
                           color: Colors.black,
@@ -327,7 +328,7 @@ class _HomeMobileState extends State<HomeMobile> {
                               ),
                               style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 25, vertical: 15),
+                                    horizontal: 15, vertical: 5),
                                 // fixedSize: const Size(
                                 //     220, 45), // Set the width and height
                                 primary: AppColor
@@ -357,7 +358,7 @@ class _HomeMobileState extends State<HomeMobile> {
                               ),
                               style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 25, vertical: 15),
+                                    horizontal: 15, vertical: 5),
                                 // fixedSize: const Size(
                                 //     220, 45), // Set the width and height
                                 primary: AppColor
@@ -379,12 +380,12 @@ class _HomeMobileState extends State<HomeMobile> {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10 ),
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 15 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'TIN REGISTRATION',
+                      'RETURN FILLING',
                       style: TextStyle(
                           fontSize: 12,
                           color: Colors.black,
@@ -421,7 +422,7 @@ class _HomeMobileState extends State<HomeMobile> {
                               ),
                               style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 25, vertical: 15),
+                                    horizontal: 15, vertical: 5),
                                 // fixedSize: const Size(
                                 //     220, 45), // Set the width and height
                                 primary: AppColor
@@ -451,7 +452,7 @@ class _HomeMobileState extends State<HomeMobile> {
                               ),
                               style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 25, vertical: 15),
+                                    horizontal: 15, vertical: 5),
                                 // fixedSize: const Size(
                                 //     220, 45), // Set the width and height
                                 primary: AppColor
@@ -1078,6 +1079,10 @@ class _HomeMobileState extends State<HomeMobile> {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 50,
+            ),
+            FooterMob()
 
           ],
         ),
