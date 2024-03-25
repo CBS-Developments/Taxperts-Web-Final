@@ -1044,7 +1044,7 @@ class _HomeMobileState extends State<HomeMobile> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Wrap(
-                      spacing: 15, // Horizontal space between cards
+                      spacing: 10, // Horizontal space between cards
                       runSpacing: 5, // Vertical space between lines
                       children: List.generate(3, (index) {
                         // Define the image paths and dates for each card

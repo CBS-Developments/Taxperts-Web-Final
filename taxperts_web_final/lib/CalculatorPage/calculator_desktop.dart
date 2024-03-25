@@ -1957,7 +1957,7 @@ class _CalculatorDesktopState extends State<CalculatorDesktop> {
                                 width: 600,
                                 child: Column(
                                   children: [
-                                    SizedBox(height: 20,),
+                                    SizedBox(height: 10,),
                                     CustomFormField(
                                       label: 'Name: ',
                                       child: TextField(
@@ -1992,6 +1992,22 @@ class _CalculatorDesktopState extends State<CalculatorDesktop> {
                                     SizedBox(height: 20,),
 
                                     CustomFormField(
+                                      label: 'Mobile Number: ',
+                                      child: TextField(
+                                        controller: _phoneController,
+                                        decoration: InputDecoration(
+                                          filled: true,
+                                          hintText: 'Enter Mobile Number',
+                                          fillColor: Colors.white,
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+
+                                    SizedBox(height: 20,),
+                                    CustomFormField(
                                       label: 'WhatsApp Number: ',
                                       child: TextField(
                                         controller: _phoneController,
@@ -2003,6 +2019,22 @@ class _CalculatorDesktopState extends State<CalculatorDesktop> {
                                             borderSide: BorderSide(color: Colors.black),
                                           ),
                                         ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 20,),
+                                    CustomFormField(
+                                      label: 'Message: ',
+                                      child: TextField(
+                                        controller: _phoneController,
+                                        decoration: InputDecoration(
+                                          filled: true,
+                                          hintText: 'Type here',
+                                          fillColor: Colors.white,
+                                          border: OutlineInputBorder(
+                                            borderSide: BorderSide(color: Colors.black),
+                                          ),
+                                        ),
+
                                       ),
                                     ),
 
