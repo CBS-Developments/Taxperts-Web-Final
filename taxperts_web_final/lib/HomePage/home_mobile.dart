@@ -92,7 +92,7 @@ class _HomeMobileState extends State<HomeMobile> {
                 children: <Widget>[
                   Positioned.fill(
                     child: Image.asset(
-                      'images/HomeBack650.png', // Replace with your background image
+                      'images/home300.png', // Replace with your background image
                       fit: BoxFit.cover,
                     ),
                   ),

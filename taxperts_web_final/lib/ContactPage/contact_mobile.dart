@@ -88,7 +88,7 @@ class _ContactMobileState extends State<ContactMobile> {
                 children: <Widget>[
                   Positioned.fill(
                     child: Image.asset(
-                      'images/contact650.png', // Replace with your background image
+                      'images/contact500.png', // Replace with your background image
                       fit: BoxFit.cover,
                     ),
                   ),

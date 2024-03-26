@@ -87,7 +87,7 @@ class _BlogMobileState extends State<BlogMobile> {
                 children: <Widget>[
                   Positioned.fill(
                     child: Image.asset(
-                      'images/blog650.png', // Replace with your background image
+                      'images/blog500.png', // Replace with your background image
                       fit: BoxFit.cover,
                     ),
                   ),

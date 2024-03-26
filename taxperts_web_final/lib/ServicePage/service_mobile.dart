@@ -90,7 +90,7 @@ class _ServiceMobileState extends State<ServiceMobile> {
                 children: <Widget>[
                   Positioned.fill(
                     child: Image.asset(
-                      'images/service650.png', // Replace with your background image
+                      'images/service500.png', // Replace with your background image
                       fit: BoxFit.cover,
                     ),
                   ),

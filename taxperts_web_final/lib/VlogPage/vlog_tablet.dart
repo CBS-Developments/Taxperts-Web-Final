@@ -87,7 +87,7 @@ class _VlogTabletState extends State<VlogTablet> {
                 children: <Widget>[
                   Positioned.fill(
                     child: Image.asset(
-                      'images/vlog650.png', // Replace with your background image
+                      'images/vlog500.png', // Replace with your background image
                       fit: BoxFit.cover,
                     ),
                   ),

@@ -88,7 +88,7 @@ class _ContactTabletState extends State<ContactTablet> {
                   children: <Widget>[
                     Positioned.fill(
                       child: Image.asset(
-                        'images/contact650.png', // Replace with your background image
+                        'images/contact500.png', // Replace with your background image
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -298,59 +298,59 @@ class _ContactTabletState extends State<ContactTablet> {
               const SizedBox(
                 height: 100,
               ),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: SizedBox(
-                    width: 880, // Adjust to the width of your design
-                    height: 170, // Adjust to the height of your design
-
-                    child: Stack(
-                      children: <Widget>[
-                        Positioned.fill(
-                          child: Image.asset(
-                            'images/ContactHome.png', // Replace with your background image
-                            fit: BoxFit.fitWidth,
-                          ),
-                        ),
-                        Positioned(
-                          left: 380, // Adjust the positioning as per your design
-                          bottom: 5,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.of(context).pushNamed('/start');// Handle button press
-                              },
-                              child: const Text(
-                                'Contact Us',
-                                style: TextStyle(
-                                  fontSize: 14, // Set your desired font size here
-                                  // Optional: Set font weight
-                                ),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                primary:
-                                AppColor.appOrange, // Button background color
-                                onPrimary: Colors.white, // Button text color
-                                shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                  BorderRadius.circular(25), // Rounded button
-                                ),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 25,
-                                    vertical: 16), // Set your desired padding here
-                                minimumSize:
-                                const Size(180, 48), // Set the button's size here
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // Center(
+              //   child: Padding(
+              //     padding: const EdgeInsets.all(20.0),
+              //     child: SizedBox(
+              //       width: 880, // Adjust to the width of your design
+              //       height: 170, // Adjust to the height of your design
+              //
+              //       child: Stack(
+              //         children: <Widget>[
+              //           Positioned.fill(
+              //             child: Image.asset(
+              //               'images/ContactHome.png', // Replace with your background image
+              //               fit: BoxFit.fitWidth,
+              //             ),
+              //           ),
+              //           Positioned(
+              //             left: 380, // Adjust the positioning as per your design
+              //             bottom: 5,
+              //             child: Align(
+              //               alignment: Alignment.centerRight,
+              //               child: ElevatedButton(
+              //                 onPressed: () {
+              //                   Navigator.of(context).pushNamed('/start');// Handle button press
+              //                 },
+              //                 child: const Text(
+              //                   'Contact Us',
+              //                   style: TextStyle(
+              //                     fontSize: 14, // Set your desired font size here
+              //                     // Optional: Set font weight
+              //                   ),
+              //                 ),
+              //                 style: ElevatedButton.styleFrom(
+              //                   primary:
+              //                   AppColor.appOrange, // Button background color
+              //                   onPrimary: Colors.white, // Button text color
+              //                   shape: RoundedRectangleBorder(
+              //                     borderRadius:
+              //                     BorderRadius.circular(25), // Rounded button
+              //                   ),
+              //                   padding: const EdgeInsets.symmetric(
+              //                       horizontal: 25,
+              //                       vertical: 16), // Set your desired padding here
+              //                   minimumSize:
+              //                   const Size(180, 48), // Set the button's size here
+              //                 ),
+              //               ),
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
               const SizedBox(
                 height: 90,
               ),
